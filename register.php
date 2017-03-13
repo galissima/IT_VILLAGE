@@ -43,7 +43,6 @@ if (!empty($_POST)) {
 	background-image: no-repeat;
 	}
 	.register{
-		/*background-color: orange;*/
 		width: 40%;
 		height: 200px;
 		position: relative;
