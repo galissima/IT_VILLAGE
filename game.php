@@ -144,9 +144,11 @@ switch ($_SESSION['temp']) {
 		left: 120px;<?php echo $sel3;?>
 	}
 	.div4{
-		left: 180px;<?php echo $sel4;?>
-		background-color: red;
 		background-image: url("pics/cloud.php");
+		
+		left: 180px;<?php echo $sel4;?>
+		
+		
 	}
 	.div5{
 		top: 60px;
@@ -200,7 +202,6 @@ if ($_SESSION['count']>0) {
 </form>
 <div class="container" >
 <div class="size div1">P
-<img src="pics/1.png" alt="beer" height="35" width="35">
 </div>
 <div class="size div2">I
 <img src="pics/bed.png" alt="beer" height="40" width="40">
