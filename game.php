@@ -142,7 +142,7 @@ switch ($_SESSION['temp']) {
 	.div2{
 	background-image: url('pics/hotel.png');
 		left: 110px;<?php echo $sel2;?>
-		
+	
 	}
 	.div3{
 		background-image: url('pics/coins.png');
