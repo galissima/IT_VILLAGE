@@ -135,11 +135,14 @@ switch ($_SESSION['temp']) {
 		border: 4px solid black;
 	}
 
-.div1{
+	.div1{
 	background-image: url('pics/beer.png');
 	<?php echo $sel1;?>
 	}
 	.div2{
+		background-image: url('pics/hotel.png');
+		left: 110px;<?php echo $sel2;?>
+	
 
 	}
 	.div3{
@@ -147,7 +150,8 @@ switch ($_SESSION['temp']) {
 		left: 220px;<?php echo $sel3;?>
 	}
 	.div4{
-
+		background-image: url('pics/storm.png');
+		left: 330px;<?php echo $sel4;?>
 	}
 	.div5{
 		background-image: url('pics/coins.png');
@@ -209,41 +213,18 @@ if ($_SESSION['count']>0) {
 ?>
 </form>
 <div class="container" >
-<div class="size div1">P
-</div>
-<div class="size div2">I
-<img src="pics/bed.png" alt="beer" height="40" width="40">
-</div>
-<div class="size div3">F
-<img src="pics/coins.png" alt="beer" height="40" width="40">
-</div>
-<div class="size div4">S
-<!-- <img src="pics/cloud.png" alt="beer" height="40" width="40"> -->
-</div>
-<div class="size div5">F
-<img src="pics/coins.png" alt="beer" height="40" width="40">
-</div>
-<div class="size div6">V
-<img src="pics/diamonds1.png" alt="beer" height="100" width="100">
-</div>
-<div class="size div7">I
-<img src="pics/hotel.png" alt="beer" height="40" width="40">
-</div>
-<div class="size div8">F
-<img src="pics/coins.png" alt="beer" height="40" width="40">
-</div>
-<div class="size div9">F
-<img src="pics/coins.png" alt="beer" height="40" width="40">
-</div>
-<div class="size div10">I
-<img src="pics/hotel.png" alt="beer" height="40" width="40">
-</div>
-<div class="size div11">N
-<img src="pics/winner.png" alt="beer" height="40" width="40">
-</div>
-<div class="size div12">P
-<img src="pics/beer.png" alt="beer" height="35" width="35">
-</div>
+<div class="size div1">P</div>
+<div class="size div2">I</div>
+<div class="size div3">F</div>
+<div class="size div4">S</div>
+<div class="size div5">F</div>
+<div class="size div6">V</div>
+<div class="size div7">I</div>
+<div class="size div8">F</div>
+<div class="size div9">F</div>
+<div class="size div10">I</div>
+<div class="size div11">N</div>
+<div class="size div12">P</div>
 </div>
 </body>
 </html>
