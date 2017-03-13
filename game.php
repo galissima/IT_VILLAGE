@@ -1,14 +1,14 @@
 <?php	
 session_start();
-$select= "border: 3px solid red;"; 
-if ($_SESSION['count']>=0) {
+$select= "border: 4px solid red;"; 
+//if ($_SESSION['count']>=0) {
 $_SESSION['count']=$_SESSION['count']-1;
 echo "Брой хвърляния:" . $_SESSION['count'] . "<br>" ;
 
 echo "Текуща сума: " . $_SESSION['money'];
 
 $rand=rand(1,6);
-
+$_SESSION['temp']=0;
 echo "<br>Зарче: " . $rand . "<br>";
 echo $_SESSION['temp'] . "<br>";
 $_SESSION['temp'] = $_SESSION['temp'] + $rand;
@@ -109,7 +109,7 @@ switch ($_SESSION['temp']) {
 		echo " току-що изгуби 5 монети :(";
 		break;
 }
-}
+//}
 // We've got a brand new repository
 ?>
 
@@ -117,6 +117,7 @@ switch ($_SESSION['temp']) {
 <html>
 <head>
 	<title>TI Vilige</title>
+
 <style type="text/css">
 	.container{
 	position: relative;
@@ -129,55 +130,68 @@ switch ($_SESSION['temp']) {
 	}
 	
 	.size{
-		height: 50px;
-		width: 50px;
-		border: 3px solid black;
+		height: 100px;
+		width: 100px;
+		border: 4px solid black;
 	}
 
 .div1{
+	background-image: url('pics/beer.png');
 	<?php echo $sel1;?>
 	}
 	.div2{
-		left: 60px;<?php echo $sel2;?>
-		background-image: "beer.png";
+	background-image: url('pics/hotel.png');
+		left: 110px;<?php echo $sel2;?>
+		
 	}
 	.div3{
-		left: 120px;<?php echo $sel3;?>
+		background-image: url('pics/coins.png');
+		left: 220px;<?php echo $sel3;?>
 	}
 	.div4{
-		left: 180px;<?php echo $sel4;?>
+		background-image: url('pics/storm.png');
+		left: 330px;<?php echo $sel4;?>
 	}
 	.div5{
-		top: 60px;
-		left: 180px;<?php echo $sel5;?>
+		background-image: url('pics/coins.png');
+		top: 110px;
+		left: 330px;<?php echo $sel5;?>
 	}
 	.div6{
-	top: 120px;
-	left: 180px;<?php echo $sel6;?>
+	top: 220px;
+	left: 330px;
+	background-image: url('pics/diamond.png');
+	<?php echo $sel6;?>
 	}
 	.div7{
-	top: 180px;
-	left: 180px;<?php echo $sel7;?>
+	background-image: url('pics/hotel.png');
+	top: 330px;
+	left: 330px;<?php echo $sel7;?>
 	}
 	.div8{
-	top: 180px;
-	left: 120px;<?php echo $sel8;?>
+		background-image: url('pics/coins.png');
+	top: 330px;
+	left: 220px;<?php echo $sel8;?>
 	}
 	.div9{
-	top: 180px;
-	left: 60px;<?php echo $sel9;?>
+		background-image: url('pics/coins.png');
+	top:  330px;
+	left: 110px;<?php echo $sel9;?>
 	}
 	.div10{
-	top: 180px;
+	background-image: url('pics/hotel.png');
+	top: 330px;
 	left: 0px;<?php echo $sel10;?>
 	}
 	.div11{
-	top: 120px;<?php echo $sel11;?>
+	background-image: url('pics/winner.png');
+	top: 220px;<?php echo $sel11;?>
 	left: 0px;
 	}
 	
 	.div12{
-	top: 60px;
+	background-image: url('pics/beer.png');
+	top: 110px;
 	left: 0px;<?php echo $sel12;?>
 	}
 
