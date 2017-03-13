@@ -110,6 +110,7 @@ switch ($_SESSION['temp']) {
 		break;
 }
 }
+// We've got a brand new repository
 ?>
 
 <!DOCTYPE html>
