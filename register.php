@@ -61,7 +61,7 @@ if (!empty($_POST)) {
 		height: 40px;
 	}
 </style>
-<div class="register">
+<!-- <div class="register">
 <h3>Register now:<h3>
 <form method="post" action="">
 <br>
@@ -71,6 +71,6 @@ if (!empty($_POST)) {
 	<p><input type="submit" name="submit" value="register" class="submit"><p>
 </form>
 </div>
-<?php
+ --><?php
 include('assets/includes/footer.php');
 ?>

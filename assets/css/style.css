@@ -1,28 +1,53 @@
-<?php
+/*<?php
 include('game.php');
-?>
-.container{
+?>*/
+	body{
+	background-image: url("assets/pics/background.png") ;
+	background-image: no-repeat;
+	}
+	.register{
+		width: 40%;
+		height: 200px;
+		position: relative;
+		top: 50px;
+		left: 550px;
+	}
+	.name, .password, .email{
+		width: 60%;
+		height: 40px;
+	}
+	
+	.login{
+		width: 40%;
+		height: 200px;
+		position: relative;
+		top: 140px;
+		left: 550px;
+	}
+	.name, .password{
+		width: 60%;
+		height: 40px;
+
+	}
+	.container{
 	position: relative;
 	top: 200px;
 	left: 20px;
 	}
-div{
+	div{
 	position: absolute;
 	top: 0;
 	}	
-.size{
+	.size{
 	height: 100px;
 	width: 100px;
 	border: 3px solid black;
 	}
-
-
-
-.div1{
+	.div1{
 	background-image: url('pics/beer.png');
 	<?php echo $sel1;?>
 	}
-.div2{
+	.div2{
 	background-image: url('pics/hotel.png');
 	left: 110px;<?php echo $sel2;?>
 		

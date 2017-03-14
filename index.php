@@ -19,24 +19,7 @@ if (!empty($_POST['submit'])) {
 	
 }
 ?>
-<style type="text/css">
-	body{
-	background-image: url("assets/pics/background.png") ;
-	background-image: no-repeat;
-	}
-	.login{
-		width: 40%;
-		height: 200px;
-		position: relative;
-		top: 140px;
-		left: 550px;
-	}
-	.name, .password{
-		width: 60%;
-		height: 40px;
-
-	}
-</style>
+<link rel=stylesheet  href="assets/css/style.css">
 <div class="login">
 <h3>Log in:</h3>
 <form action="game.php" method="post">
