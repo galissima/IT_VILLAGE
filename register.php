@@ -7,7 +7,7 @@
 <body>
 <div class="register">
 <h3>Register now:<h3>
-<form method="post" action="index.php">
+<form method="post" action="">
 <br>
 	<p><input type="name" name="user_name" placeholder="username" class="name">* <p>
 	<p><input type="password" name="user_password" placeholder="password" class="password">* <p>
@@ -29,11 +29,14 @@ if (!empty($_POST)) {
 	$insert_query="INSERT INTO `users`( `user_name`, `user_password`, `user_email`) VALUES ('$user_name','$user_password', '$user_email')";
 	if (mysqli_query($conn, $insert_query)) {
 		echo "New record created successfully";
+		header('Location: index.php');
 	} else {
 		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! during development !!!!!!!!!!!!!!!
 		echo "Error: " . $insert_query . " - " . mysqli_error($conn);
 	}
+
 }
+
 ?>
 <!-- <a href="login2.php">next</a> -->
 
