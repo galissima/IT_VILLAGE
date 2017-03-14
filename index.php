@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -20,16 +21,17 @@ session_start();
 
 if (!empty($_POST['submit'])) {
 	$_SESSION['user_name'] = $_POST['user_name'];
-	echo "Hello, ".$_SESSION['username'];
-	echo '<a href="register.php">next</a>';
-} else {
-	$_SESSION['count'] = rand(10,20);
-echo " Брой хвърляния: "  . $_SESSION['count']. "<br>";
-	$_SESSION['money'] = rand(50,100);
-echo "Начална сума: " . $_SESSION['money'];
+	echo "Hello, ".$_SESSION['user_name'];
 	
+} 
 	
-}
+	echo '<br> <a href="register.php">REGISTER NOW</a>';
+	
+
+
+$_SESSION['count'] = rand(10,20);
+$_SESSION['money'] = rand(50,100);
+
 
 
 	?>

@@ -1,6 +1,7 @@
 <?php	//ouwhefiouawhgiawhgtiauwgthaiweuftgh
 session_start();
 $select= "border: 4px solid red;"; 
+
 //if ($_SESSION['count']>=0) {
 $_SESSION['count']=$_SESSION['count']-1;
 echo "Брой хвърляния:" . $_SESSION['count'] . "<br>" ;
@@ -37,6 +38,7 @@ switch ($_SESSION['temp']) {
 		echo "Честито, купи хотел :)"; 
 		}else{
 			$_SESSION['money']=$_SESSION['money']-10;
+			echo "Нощувка - 10 лв";
 		}
 		break;
 	case '3':
@@ -121,7 +123,7 @@ switch ($_SESSION['temp']) {
 <style type="text/css">
 	.container{
 	position: relative;
-	top: 200px;
+	top: 10px;
 	left: 20px;
 	}
 	div{

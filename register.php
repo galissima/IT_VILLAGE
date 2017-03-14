@@ -7,10 +7,10 @@
 <body>
 <div class="register">
 <h3>Register now:<h3>
-<form method="post" action="">
+<form method="post" action="index.php">
 <br>
 	<p><input type="name" name="user_name" placeholder="username" class="name">* <p>
-	<p><input type="text" name="user_password" placeholder="password" class="password">* <p>
+	<p><input type="password" name="user_password" placeholder="password" class="password">* <p>
 	<p><input type="email" name="user_email" placeholder="email" class="email">* <p>
 	<p><input type="submit" name="submit" value="register" class="submit"><p>
 </form>
