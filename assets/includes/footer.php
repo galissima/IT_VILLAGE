@@ -1,15 +1,11 @@
 </body>
 <footer>
-<div class="footer"><p>All rights reserved!!!</p></div>
+<div class="footer">All rights reserved!!!</div>
 <style type="text/css">
 	.footer{
 		position: absolute;
-		width: 80%;
-		height: 100px;
 		bottom: 10px;
-		right: 10%;
-		border:1px solid black;	}
-		
+		right: 10px;	}
 </style>
 </footer>
 </html>
