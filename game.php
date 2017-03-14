@@ -1,7 +1,7 @@
 <?php	
 $title = 'Game';
 include('assets/includes/header.php');
-
+ 
 session_start();
 $select= "border: 4px solid red;"; 
 //if ($_SESSION['count']>=0) {
@@ -16,7 +16,7 @@ echo "<br>Зарче: " . $rand . "<br>";
 echo $_SESSION['temp'] . "<br>";
 $_SESSION['temp'] = $_SESSION['temp'] + $rand;
 echo $_SESSION['temp'];
-
+   
 
 
 
@@ -204,7 +204,7 @@ switch ($_SESSION['temp']) {
 <?php
 if ($_SESSION['count']>0) {
 	echo '<input type="submit" name="submit" value="submit">';
-	
+
 	}
 	else{
 		echo "GAME OVER!!";
