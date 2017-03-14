@@ -42,13 +42,14 @@ if (mysqli_num_rows($result) > 0) {
 
 if (in_array($_SESSION['user_name'], $array)) {
 	
-	//header('Location: game.php');
+	
+
 }
 else{
 	echo "<br>molq registrirai se ". $_SESSION['user_name'] . " takuv";
 }
 
-
+///////////////////////////////////
 
 	?>
 </body>
