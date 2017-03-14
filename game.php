@@ -81,6 +81,7 @@ switch ($_SESSION['temp']) {
 		$sel8=$select;
 		echo "F";
 		$_SESSION['money']=$_SESSION['money']+20;
+
 		echo " зЕми тия 20 монети :)";
 		break;
 	case '9':
@@ -203,12 +204,14 @@ switch ($_SESSION['temp']) {
 <?php
 if ($_SESSION['count']>0) {
 	echo '<input type="submit" name="submit" value="submit">';
+	
 	}
 	else{
 		echo "GAME OVER!!";
 		session_destroy();
 	}
 ?>
+
 </form>
 <a href="logout.php">LOG OUT</a>
 <div class="container" >
