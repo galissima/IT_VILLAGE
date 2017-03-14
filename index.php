@@ -6,7 +6,7 @@ include('assets/includes/header.php');
 
 <?php 
 session_start();
-
+// check
 if (!empty($_POST['submit'])) {
 	$_SESSION['user_name'] = $_POST['user_name'];
 	echo "Hello, ".$_SESSION['username'];
