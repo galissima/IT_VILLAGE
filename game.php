@@ -1,7 +1,9 @@
-<?php	//ouwhefiouawhgiawhgtiauwgthaiweuftgh
+<?php	
+$title = 'Game';
+include('assets/includes/header.php');
+
 session_start();
 $select= "border: 4px solid red;"; 
-
 //if ($_SESSION['count']>=0) {
 $_SESSION['count']=$_SESSION['count']-1;
 echo "Брой хвърляния:" . $_SESSION['count'] . "<br>" ;
@@ -112,17 +114,16 @@ switch ($_SESSION['temp']) {
 		break;
 }
 //}
-// We've got a brand new repository
+
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>TI Vilige</title>
+
 
 <style type="text/css">
 	.container{
 	position: relative;
+	top: 50px;
+
 	top: 10px;
 	left: 20px;
 	}
@@ -138,73 +139,67 @@ switch ($_SESSION['temp']) {
 	}
 
 	.div1{
-	background-image: url('pics/beer.png');
+	background-image: url('assets/pics/beer.png');
 	<?php echo $sel1;?>
 	}
 	.div2{
-		background-image: url('pics/hotel.png');
+		background-image: url('assets/pics/hotel.png');
 		left: 110px;<?php echo $sel2;?>
 	
 
 	}
 	.div3{
-		background-image: url('pics/coins.png');
+		background-image: url('assets/pics/coins.png');
 		left: 220px;<?php echo $sel3;?>
 	}
 	.div4{
-		background-image: url('pics/storm.png');
+		background-image: url('assets/pics/storm.png');
 		left: 330px;<?php echo $sel4;?>
 	}
 	.div5{
-		background-image: url('pics/coins.png');
+		background-image: url('assets/pics/coins.png');
 		top: 110px;
 		left: 330px;<?php echo $sel5;?>
 	}
 	.div6{
 	top: 220px;
 	left: 330px;
-	background-image: url('pics/diamond.png');
+	background-image: url('assets/pics/diamond.png');
 	<?php echo $sel6;?>
 	}
 	.div7{
-	background-image: url('pics/hotel.png');
+	background-image: url('assets/pics/hotel.png');
 	top: 330px;
 	left: 330px;<?php echo $sel7;?>
 	}
 	.div8{
-		background-image: url('pics/coins.png');
+		background-image: url('assets/pics/coins.png');
 	top: 330px;
 	left: 220px;<?php echo $sel8;?>
 	}
 	.div9{
-		background-image: url('pics/coins.png');
+		background-image: url('assets/pics/coins.png');
 	top:  330px;
 	left: 110px;<?php echo $sel9;?>
 	}
 	.div10{
-	background-image: url('pics/hotel.png');
+	background-image: url('assets/pics/hotel.png');
 	top: 330px;
 	left: 0px;<?php echo $sel10;?>
 	}
 	.div11{
-	background-image: url('pics/winner.png');
+	background-image: url('assets/pics/winner.png');
 	top: 220px;<?php echo $sel11;?>
 	left: 0px;
 	}
 	
 	.div12{
-	background-image: url('pics/beer.png');
+	background-image: url('assets/pics/beer.png');
 	top: 110px;
 	left: 0px;<?php echo $sel12;?>
 	}
-
-
 </style>
-</head>
-<body>
-<!-- <button onclick="myFunction()">Click me</button> -->
 <form method="" action="">
-
 <?php
 if ($_SESSION['count']>0) {
 	echo '<input type="submit" name="submit" value="submit">';
@@ -229,6 +224,8 @@ if ($_SESSION['count']>0) {
 <div class="size div10">I</div>
 <div class="size div11">N</div>
 <div class="size div12">P</div>
+
 </div>
-</body>
-</html>
+<?php
+include('assets/includes/footer.php');
+?>

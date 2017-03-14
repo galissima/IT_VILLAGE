@@ -1,3 +1,8 @@
+<?php
+$title = 'Register'; 
+include('assets/includes/header.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +20,7 @@
 	<p><input type="submit" name="submit" value="register" class="submit"><p>
 </form>
 </div>
+
 <?php 
 include('db_connection.php');
 
@@ -34,29 +40,37 @@ if (!empty($_POST)) {
 		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! during development !!!!!!!!!!!!!!!
 		echo "Error: " . $insert_query . " - " . mysqli_error($conn);
 	}
-
 }
-
 ?>
 <!-- <a href="login2.php">next</a> -->
 
 <style type="text/css">
 	body{
-	background-image: url("pics/background.png") ;
+	background-image: url("assets/pics/background.png") ;
 	background-image: no-repeat;
 	}
 	.register{
 		width: 40%;
 		height: 200px;
 		position: relative;
-		top: 140px;
-		left: 470px;
+		top: 50px;
+		left: 550px;
 	}
 	.name, .password, .email{
 		width: 60%;
 		height: 40px;
-
 	}
 </style>
-</body>
-</html>
+<div class="register">
+<h3>Register now:<h3>
+<form method="post" action="">
+<br>
+	<p><input type="name" name="user_name" placeholder="username" class="name">* <p>
+	<p><input type="text" name="user_password" placeholder="password" class="password">* <p>
+	<p><input type="email" name="user_email" placeholder="email" class="email">* <p>
+	<p><input type="submit" name="submit" value="register" class="submit"><p>
+</form>
+</div>
+<?php
+include('assets/includes/footer.php');
+?>
