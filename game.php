@@ -204,6 +204,7 @@ switch ($_SESSION['temp']) {
 <body>
 <!-- <button onclick="myFunction()">Click me</button> -->
 <form method="" action="">
+
 <?php
 if ($_SESSION['count']>0) {
 	echo '<input type="submit" name="submit" value="submit">';
@@ -214,6 +215,7 @@ if ($_SESSION['count']>0) {
 	}
 ?>
 </form>
+<a href="logout.php">LOG OUT</a>
 <div class="container" >
 <div class="size div1">P</div>
 <div class="size div2">I</div>
