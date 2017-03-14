@@ -1,4 +1,4 @@
 <?php 
 session_destroy();
-header('Location: login.php');
-// zwsrzwyszy
+header('Location: index.php');
+// zwsrzwyszy --> -->

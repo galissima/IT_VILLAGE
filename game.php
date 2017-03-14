@@ -1,5 +1,3 @@
-
-
 <?php	
 $title = 'Game';
 include('assets/includes/header.php');
@@ -42,6 +40,7 @@ switch ($_SESSION['temp']) {
 		echo "Честито, купи хотел :)"; 
 		}else{
 			$_SESSION['money']=$_SESSION['money']-10;
+			echo "Нощувка - 10 лв";
 		}
 		break;
 	case '3':
@@ -124,6 +123,8 @@ switch ($_SESSION['temp']) {
 	.container{
 	position: relative;
 	top: 50px;
+
+	top: 10px;
 	left: 20px;
 	}
 	div{
@@ -197,12 +198,7 @@ switch ($_SESSION['temp']) {
 	top: 110px;
 	left: 0px;<?php echo $sel12;?>
 	}
-
-
 </style>
-
-
-<!-- <button onclick="myFunction()">Click me</button> -->
 <form method="" action="">
 <?php
 if ($_SESSION['count']>0) {
@@ -214,6 +210,7 @@ if ($_SESSION['count']>0) {
 	}
 ?>
 </form>
+<a href="logout.php">LOG OUT</a>
 <div class="container" >
 <div class="size div1">P</div>
 <div class="size div2">I</div>
