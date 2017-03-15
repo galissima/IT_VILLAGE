@@ -2,14 +2,7 @@
 $title = 'Register'; 
 include('assets/includes/header.php');
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Register</title>
-</head>
-<body>
+<link rel=stylesheet  type="text/css" href="assets/css/style.css">
 <div class="register">
 <h3>Register now:<h3>
 <form method="post" action="">
@@ -44,23 +37,7 @@ if (!empty($_POST)) {
 ?>
 <!-- <a href="login2.php">next</a> -->
 
-<style type="text/css">
-	body{
-	background-image: url("assets/pics/background.png") ;
-	background-image: no-repeat;
-	}
-	.register{
-		width: 40%;
-		height: 200px;
-		position: relative;
-		top: 50px;
-		left: 550px;
-	}
-	.name, .password, .email{
-		width: 60%;
-		height: 40px;
-	}
-</style>
+
 <?php
 include('assets/includes/footer.php');
 ?>
