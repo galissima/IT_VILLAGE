@@ -8,9 +8,4 @@
 </head>
 <body>
 
-<ul>
-	<li><a href="index.php">index</li>
-	<li><a href="register.php">register</li>
-	<li><a href="game.php">game</li>
-</ul>
 
