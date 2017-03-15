@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = 'GameOver';
 include('assets/includes/header.php');
 ?>
@@ -7,7 +8,7 @@ include('assets/includes/header.php');
 
 <p id="game">GAME</p>
 <p id="over">OVER</p>
-<p id="score">SCORE:5345coins</p>
+<p id="score">SCORE: <?php echo $_SESSION['money'] ?> </p>
 
 </div>
 <a href="game.php" class="newgame">NewGame</a>

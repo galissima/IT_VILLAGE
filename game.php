@@ -241,6 +241,10 @@ if (!empty($_POST)) {
 }
 
 
+if ($_SESSION['money'] <= 0 || $_SESSION['count'] <= 0  ) {
+	header('Location: game_over.php');
+}
+
 ?>
 
 
@@ -377,15 +381,8 @@ if (!empty($_POST)) {
 </style>
 <form method="" action="">
 
-<?php
-if ($_SESSION['count']>0) {?>
+
 	<input type="submit" name="submit" value="submit" onclick="alert('<?php echo $message;  ?> ')">
-
-<?php	}
-	else{
-		header('Location: game_over.php');
-	}?>
-
 
 </form>
 <a href="logout.php">LOG OUT</a>
