@@ -3,6 +3,9 @@ body{
 	background-image: url("assets/pics/background.png") ;
 	background-image: no-repeat;
 	}
+
+	/* index.php file*/
+
 	.login{
 		width: 40%;
 		height: 200px;
@@ -10,6 +13,14 @@ body{
 		top: 140px;
 		left: 550px;
 	}
+	.name, .password{
+		width: 60%;
+		height: 40px;
+
+	}
+
+	/* Register.php file*/
+
 	.register{
 		width: 40%;
 		height: 200px;
@@ -27,82 +38,226 @@ body{
 		width: 60%;
 		height: 40px;
 
-}
+	}
+
+	/* game.php file*/
+
+	.quest{
+	width: 30%;
+	height: 200px;
+	position: absolute;
+	top: 280;
+	left: 480px;
+	}
+
 	.container{
 	position: relative;
-	top: 200px;
-	left: 20px;
+	top: 10px;
+	left: 250px;
 	}
 
 	div{
-	position: absolute;
-	top: 0;
-	}	
-	.size{
-	height: 100px;
-	width: 100px;
-	border: 3px solid black;
+		position: absolute;
+		top: 0;
 	}
+	
+	.size{
+		height: 100px;
+		width: 100px;
+		border: 4px solid black;
+	}
+
 	.div1{
 	background-image: url('assets/pics/beer.png');
 	<?php echo $sel1;?>
 	}
+
 	.div2{
-	background-image: url('assets/pics/hotel.png');
-	left: 110px;<?php echo $sel2;?>
-		
+		background-image: url('assets/pics/hotel.png');
+		left: 110px;<?php echo $sel2;?>
+	
 	}
 	.div3{
-	background-image: url('assets/pics/coins.png');
-	left: 220px;<?php echo $sel3;?>
+		background-image: url('assets/pics/coins.png');
+		left: 220px;<?php echo $sel3;?>
 	}
 	.div4{
-	background-image: url('assets/pics/storm.png');
-	left: 330px;<?php echo $sel4;?>
+		background-image: url('assets/pics/storm.png');
+		left: 330px;<?php echo $sel4;?>
 	}
-.div5{
-	background-image: url('assets/pics/coins.png');
-	top: 110px;
-	left: 330px;<?php echo $sel5;?>
+	.div5{
+		background-image: url('assets/pics/coins.png');
+		
+		left: 440px;<?php echo $sel5;?>
 	}
-.div6{
-	top: 220px;
-	left: 330px;
-	background-image: url('assets/pics/diamond.png');
-	<?php echo $sel6;?>
-	}
-.div7{
-	background-image: url('assets/pics/hotel.png');
-	top: 330px;
-	left: 330px;<?php echo $sel7;?>
-	}
-.div8{
-	background-image: url('assets/pics/coins.png');
-	top: 330px;
-	left: 220px;<?php echo $sel8;?>
-	}
-.div9{
-	background-image: url('assets/pics/coins.png');
-	top:  330px;
-	left: 110px;<?php echo $sel9;?>
-	}
-.div10{
-	background-image: url('assets/pics/hotel.png');
-	top: 330px;
-	left: 0px;<?php echo $sel10;?>
-	}
-.div11{
-	background-image: url('assets/pics/winner.png');
-	top: 220px;<?php echo $sel11;?>
-	left: 0px;
-	}
+	.div6{
 	
-.div12{
-	background-image: url('assets/pics/beer.png');
-	top: 110px;
-	left: 0px;<?php echo $sel12;?>
+		left: 550px;
+		background-image: url('assets/pics/diamond.png');
+		<?php echo $sel6;?>
 	}
 
-.footer{
-	color: red;
+	.div7{
+		background-image: url('assets/pics/hotel.png');
+	
+		left: 660px;<?php echo $sel7;?>
+	}
+
+	.div8{
+		background-image: url('assets/pics/coins.png');
+	
+		left: 770px;<?php echo $sel8;?>
+	}
+
+	.div9{
+		background-image: url('assets/pics/quest.png');
+		top:  110px;
+		left: 770px;<?php echo $sel9;?>
+	}
+
+	.div10{
+		background-image: url('assets/pics/hotel.png');
+		top: 220px;
+		left: 770px;<?php echo $sel10;?>
+	}
+
+	.div11{
+		background-image: url('assets/pics/winner.png');
+		left: 770px;
+		top: 330px;<?php echo $sel11;?>
+	
+	}
+
+	.div12{
+		background-image: url('assets/pics/prison.png');
+		top: 330px;
+		left: 660px;<?php echo $sel12;?>
+	}
+
+	.div13{
+		background-image: url('assets/pics/quest.png');
+		top: 330px;
+		left: 550px;<?php echo $sel13;?>
+	}
+
+	.div14{
+		background-image: url('assets/pics/beer.png');
+		top: 330px;
+		left: 440px;<?php echo $sel14;?>
+	}
+
+	.div15{
+		background-image: url('assets/pics/horse.png');
+		top: 330px;
+		left: 330px;<?php echo $sel15;?>
+	}
+
+	.div16{
+		background-image: url('assets/pics/coins.png');
+		top: 330px;
+		left: 220px;<?php echo $sel16;?>
+	}
+
+	.div17{
+		background-image: url('assets/pics/prison.png');
+		top: 330px;
+		left: 110px;<?php echo $sel17;?>
+	}
+
+	.div18{
+		background-image: url('assets/pics/turbo.png');
+		top: 330px;
+		left: 0px;<?php echo $sel18;?>
+	}
+
+	.div19{
+		background-image: url('assets/pics/beer.png');
+		top: 220px;
+		left: 0px;<?php echo $sel19;?>
+	}
+	.div20{
+		background-image: url('assets/pics/coins.png');
+		top: 110px;
+		left: 0px;<?php echo $sel20;?>
+	}
+	
+	/* game_over file*/
+
+	.newgame{
+	 background-color: #696;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+   position: absolute;
+   top: 520px;
+   left: 250px;
+
 }
+	.logout{
+     background-color: #696;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+   position: absolute;
+   top: 530px;
+   right: 250px;
+
+}
+.gameover{
+    position: relative;
+    top: 20px;
+    width: 80%;
+    height: 500px;
+   
+
+}
+
+#game {
+    color: #696;
+    font-size: 200px;
+    display: inline-block;
+    width: 5px;
+    margin-left: 30px;
+    position: absolute;
+    left: 100px;
+    top: -150px;
+    transform: rotate(-5deg);}
+#over {
+    color: #696;
+    font-size: 200px;
+    display: inline-block;
+    width: 5px;
+    margin-left: 30px;
+    position: absolute;
+    left: 200px;
+    top: -50px;
+    transform: rotate(-5deg);}
+ #score {
+    color: #696;
+    font-size: 70px;
+    display: inline-block;
+    width: 5px;
+    margin-left: 30px;
+    position: absolute;
+    left: 400px;
+    top: 300px;
+    /*transform: rotate(-5deg);}*/
+	}
+
+	.footer{
+		color: red;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}

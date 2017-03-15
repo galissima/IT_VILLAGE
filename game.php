@@ -92,26 +92,25 @@ $quest_temp1 = rand(2,4);
 $quest_temp2 = rand(2,4);
 $quest_temp3 = rand(2,4);
 ?>
+
 <div class="quest">
 <p><?=   $qusts[$quest_rand][1]     ?>  </p>
 <form method="get" action="">
- <input type="radio" name="answer" value="<?php $qusts[$quest_rand][$quest_temp1]; ?>" > <?php echo  $qusts[$quest_rand][$quest_temp1]; ?> <br>
-  <input type="radio" name="answer" value="<?php $qusts[$quest_rand][$quest_temp2]; ?>"> <?php echo  $qusts[$quest_rand][$quest_temp2]; ?><br>
-  <input type="radio" name="answer" value=" <?php $qusts[$quest_rand][$quest_temp3]; ?>"> <?php echo  $qusts[$quest_rand][$quest_temp3]; ?><br><br>
-  <input type="submit" name="submit" value="answer">
+<input type="radio" name="answer" value="<?php $qusts[$quest_rand][$quest_temp1]; ?>" > <?php echo  $qusts[$quest_rand][$quest_temp1]; ?> <br>
+<input type="radio" name="answer" value="<?php $qusts[$quest_rand][$quest_temp2]; ?>"> <?php echo  $qusts[$quest_rand][$quest_temp2]; ?><br>
+<input type="radio" name="answer" value=" <?php $qusts[$quest_rand][$quest_temp3]; ?>"> <?php echo  $qusts[$quest_rand][$quest_temp3]; ?><br><br>
+<input type="submit" name="submit" value="answer">
 </div>
+
 <?php
+
 if (!empty($_GET)) {
-	
-
-
-if ($_GET['answer'] == $qusts[$quest_rand][4]) {
+	if ($_GET['answer'] == $qusts[$quest_rand][4]) {
 	echo "Great";
-}else{
+	}else{
 	echo "Incorrect";
 }
 }
-
 
 		$message=" зЕми тия 20 монети :)";
 		break;
@@ -172,154 +171,21 @@ if ($_GET['answer'] == $qusts[$quest_rand][4]) {
 		break;
 
 }
-
-
 ?>
 
-
-
-<style type="text/css">
-
-.quest{
-	width: 30%;
-	height: 200px;
-	/*background-color: green;*/
-	position: absolute;
-	top: 280;
-	left: 480px;
-}
-	.container{
-	position: relative;
-	
-	top: 10px;
-	left: 250px;
-	}
-	div{
-		position: absolute;
-		top: 0;
-	}
-	
-	.size{
-		height: 100px;
-		width: 100px;
-		border: 4px solid black;
-	}
-
-	.div1{
-	background-image: url('assets/pics/beer.png');
-	<?php echo $sel1;?>
-	}
-	.div2{
-		background-image: url('assets/pics/hotel.png');
-		left: 110px;<?php echo $sel2;?>
-	
-	}
-	.div3{
-		background-image: url('assets/pics/coins.png');
-		left: 220px;<?php echo $sel3;?>
-	}
-	.div4{
-		background-image: url('assets/pics/storm.png');
-		left: 330px;<?php echo $sel4;?>
-	}
-	.div5{
-		background-image: url('assets/pics/coins.png');
-		
-		left: 440px;<?php echo $sel5;?>
-	}
-	.div6{
-	
-	left: 550px;
-	background-image: url('assets/pics/diamond.png');
-	<?php echo $sel6;?>
-	}
-	.div7{
-	background-image: url('assets/pics/hotel.png');
-	
-	left: 660px;<?php echo $sel7;?>
-	}
-	.div8{
-		background-image: url('assets/pics/coins.png');
-	
-	left: 770px;<?php echo $sel8;?>
-	}
-	.div9{
-		background-image: url('assets/pics/quest.png');
-	top:  110px;
-	left: 770px;<?php echo $sel9;?>
-	}
-	.div10{
-	background-image: url('assets/pics/hotel.png');
-	top: 220px;
-	left: 770px;<?php echo $sel10;?>
-	}
-	.div11{
-	background-image: url('assets/pics/winner.png');
-	left: 770px;
-	top: 330px;<?php echo $sel11;?>
-	
-	}
-	.div12{
-	background-image: url('assets/pics/prison.png');
-	top: 330px;
-	left: 660px;<?php echo $sel12;?>
-	}
-	.div13{
-	background-image: url('assets/pics/quest.png');
-	top: 330px;
-	left: 550px;<?php echo $sel13;?>
-	}
-	.div14{
-	background-image: url('assets/pics/beer.png');
-	top: 330px;
-	left: 440px;<?php echo $sel14;?>
-	}
-	.div15{
-	background-image: url('assets/pics/horse.png');
-	top: 330px;
-	left: 330px;<?php echo $sel15;?>
-	}
-	.div16{
-	background-image: url('assets/pics/coins.png');
-	top: 330px;
-	left: 220px;<?php echo $sel16;?>
-	}
-	.div17{
-	background-image: url('assets/pics/prison.png');
-	top: 330px;
-	left: 110px;<?php echo $sel17;?>
-	}
-	.div18{
-	background-image: url('assets/pics/turbo.png');
-	top: 330px;
-	left: 0px;<?php echo $sel18;?>
-	}
-	.div19{
-	background-image: url('assets/pics/beer.png');
-	top: 220px;
-	left: 0px;<?php echo $sel19;?>
-	}
-	.div20{
-	background-image: url('assets/pics/coins.png');
-	top: 110px;
-	left: 0px;<?php echo $sel20;?>
-	}
-
-
-
-</style>
 <form method="" action="">
 
 <?php
-if ($_SESSION['count']>0) {?>
+if ($_SESSION['count']>0) {
+?>
 	<input type="submit" name="submit" value="submit" onclick="alert('<?php echo $message;  ?> ')">
 
 <?php	}
 	else{
 		echo "GAME OVER!!";
 		session_destroy();
-	}?>
-
+	}
+?>
 
 </form>
 <a href="logout.php">LOG OUT</a>
@@ -345,6 +211,7 @@ if ($_SESSION['count']>0) {?>
 <div class="size div19">P</div>
 <div class="size div20">P</div>
 </div>
+
 <?php
 include('assets/includes/footer.php');
 ?>

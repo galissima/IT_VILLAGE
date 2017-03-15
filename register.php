@@ -2,7 +2,7 @@
 $title = 'Register'; 
 include('assets/includes/header.php');
 ?>
-<link rel=stylesheet  type="text/css" href="assets/css/style.css">
+
 <div class="register">
 <h3>Register now:<h3>
 <form method="post" action="">
@@ -16,8 +16,6 @@ include('assets/includes/header.php');
 
 <?php 
 include('db_connection.php');
-
-// session_start();
 
 
 if (!empty($_POST)) {
