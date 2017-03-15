@@ -30,7 +30,7 @@ switch ($_SESSION['temp']) {
 		$sel1=$select;
 		echo "P";
 		$_SESSION['money']=$_SESSION['money']-5;
-		echo "току-що изгуби 5 монети :(";
+		echo "<div c>току-що изгуби 5 монети :( </div>";
 		break;
 	case '2':
 		$sel2=$select;
