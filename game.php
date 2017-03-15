@@ -261,7 +261,8 @@ if ($_SESSION['money'] <= 0 || $_SESSION['count'] <= 0  ) {
 }
 	.container{
 	position: relative;
-	
+	width: 1000px;
+	height: 500px;
 	top: 10px;
 	left: 250px;
 	}
