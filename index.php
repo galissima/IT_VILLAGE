@@ -1,11 +1,3 @@
-<div class="login">
-<h3>Log in:</h3>
-<form action="" method="post">
-	<p><input type="text" name="user_name" class="name" placeholder="Username">*</p>
-	<p><input type="password" name="user_password" class="password" placeholder="Password">*</p>
-	<p><input type="submit" name="submit" value="login"></p>		
-	</form>
-</div>
 
 
 
@@ -48,26 +40,15 @@ if (!empty($_POST['submit'])) {
 		}
 }
 ?>
- 
-<style type="text/css">
-	body{
-	background-image: url("assets/pics/background.png") ;
-	background-image: no-repeat;
-	}
-	.login{
-		width: 40%;
-		height: 200px;
-		position: relative;
-		top: 140px;
-		left: 550px;
-	}
-	.name, .password{
-		width: 60%;
-		height: 40px;
 
-	}
-</style>
-
+<div class="login">
+<h3>Log in:</h3>
+<form action="" method="post">
+	<p><input type="text" name="user_name" class="name" placeholder="Username">*</p>
+	<p><input type="password" name="user_password" class="password" placeholder="Password">*</p>
+	<p><input type="submit" name="submit" value="login"></p>		
+	</form>
+</div>
 
 <?php
 include('assets/includes/footer.php');
