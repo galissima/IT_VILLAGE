@@ -34,7 +34,7 @@ if ($_SESSION['temp']>20) {
 	$_SESSION['temp']=$_SESSION['temp']-20;
 }
 echo "<br>" . $_SESSION['temp'] . "<br>";
-//$_SESSION['temp']=9;
+
 switch ($_SESSION['temp']) {
 	case '1':
 		$sel1=$select;
@@ -45,7 +45,7 @@ switch ($_SESSION['temp']) {
 		$sel2=$select;
 		if ($_SESSION['money']>100) {
 		$_SESSION['money']=$_SESSION['money']-100;
-		echo "Честито, купи хотел :)"; 
+		$message="Честито, купи хотел :)"; 
 		}else{
 			$_SESSION['money']=$_SESSION['money']-10;
 			$message="Нощувка - 10 лв";
@@ -261,7 +261,8 @@ if ($_SESSION['money'] <= 0 || $_SESSION['count'] <= 0  ) {
 }
 	.container{
 	position: relative;
-	
+	width: 1000px;
+	height: 500px;
 	top: 10px;
 	left: 250px;
 	}
