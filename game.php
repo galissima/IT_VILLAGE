@@ -4,98 +4,122 @@ include('assets/includes/header.php');
  
 session_start();
 $select= "border: 4px solid red;"; 
-//if ($_SESSION['count']>=0) {
 $_SESSION['count']=$_SESSION['count']-1;
-echo "Брой хвърляния:" . $_SESSION['count'] . "<br>" ;
 
-echo "Текуща сума: " . $_SESSION['money'];
+echo "Брой хвърляния:" . $_SESSION['count'] . "<br>" ;
+echo "Текуща сума: " . $_SESSION['money'] ." Монети ";
 
 $rand=rand(1,6);
-$_SESSION['temp']=0;
+
 echo "<br>Зарче: " . $rand . "<br>";
+
 echo $_SESSION['temp'] . "<br>";
 $_SESSION['temp'] = $_SESSION['temp'] + $rand;
 echo $_SESSION['temp'];
    
 
-
-
-if ($_SESSION['temp']>12) {
-	$_SESSION['temp']=$_SESSION['temp']-12;
+if ($_SESSION['temp']>20) {
+	$_SESSION['temp']=$_SESSION['temp']-20;
 }
 echo "<br>" . $_SESSION['temp'] . "<br>";
-
+$_SESSION['temp']=9;
 switch ($_SESSION['temp']) {
 	case '1':
 		$sel1=$select;
-		echo "P";
 		$_SESSION['money']=$_SESSION['money']-5;
-		echo "<div c>току-що изгуби 5 монети :( </div>";
+		$message="току-що изгуби 5 монети :(";
 		break;
 	case '2':
 		$sel2=$select;
-		echo "I";
 		if ($_SESSION['money']>100) {
 		$_SESSION['money']=$_SESSION['money']-100;
 		echo "Честито, купи хотел :)"; 
 		}else{
 			$_SESSION['money']=$_SESSION['money']-10;
-			echo "Нощувка - 10 лв";
+			$message="Нощувка - 10 лв";
 		}
 		break;
 	case '3':
 		$sel3=$select;
-		echo "F";
 		$_SESSION['money']=$_SESSION['money']+20;
-		echo " зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети :)";
 		break;
 	case '4':
 		$sel4=$select;
-		echo "S";
 		$_SESSION['count']=$_SESSION['count']-2;
-		echo " Wi-Fi - я ГРЪМНА!!! Губиш 2 хода :(" ;
+		$message=" Wi-Fi - я ГРЪМНА!!! Губиш 2 хода :(" ;
 		break;
 	case '5':
 		$sel5=$select;
-		echo "F";
 		$_SESSION['money']=$_SESSION['money']+20;
-		echo " зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети :)";
 		break;
 	case '6':
 		$sel6=$select;
-		echo "V";
 		$_SESSION['money']=$_SESSION['money']*10;
-		echo "УАУ!Вашата сума се умножава по 10!!! :)";
+		$message="УАУ!Вашата сума се умножава по 10!!! :)";
 		break;
 	case '7':
 		$sel7=$select;
-		echo "I";
 		if ($_SESSION['money']>100) {
 		$_SESSION['money']=$_SESSION['money']-100;
-		echo "Честито, купи хотел :)"; 
+		$message="Честито, купи хотел :)"; 
 		}else{
 			$_SESSION['money']=$_SESSION['money']-10;
 		}
 		break;
 	case '8':
 		$sel8=$select;
-		echo "F";
-		$_SESSION['money']=$_SESSION['money']+20;
-
-		echo " зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети :)";
 		break;
 	case '9':
 		$sel9=$select;
-		echo "F";
-		$_SESSION['money']=$_SESSION['money']+20;
-		echo " зЕми тия 20 монети :)";
+
+
+$qusts[1][1] = "kak se kazvam";
+$qusts[1][2] ="mitko" ;
+$qusts[1][3] = "kolio" ;
+$qusts[1][4] = "correct" ;
+
+
+$qusts[2][1] = "kak se kazva galq";
+$qusts[2][2] ="mitko galq" ;
+$qusts[2][3] = "kolio galq" ;
+$qusts[2][4] = "correct" ;
+
+$quest_rand = rand(1,2);
+$quest_temp1 = rand(2,4);
+$quest_temp2 = rand(2,4);
+$quest_temp3 = rand(2,4);
+?>
+<div class="quest">
+<p><?=   $qusts[$quest_rand][1]     ?>  </p>
+<form method="get" action="">
+ <input type="radio" name="answer" value="<?php $qusts[$quest_rand][$quest_temp1]; ?>" > <?php echo  $qusts[$quest_rand][$quest_temp1]; ?> <br>
+  <input type="radio" name="answer" value="<?php $qusts[$quest_rand][$quest_temp2]; ?>"> <?php echo  $qusts[$quest_rand][$quest_temp2]; ?><br>
+  <input type="radio" name="answer" value=" <?php $qusts[$quest_rand][$quest_temp3]; ?>"> <?php echo  $qusts[$quest_rand][$quest_temp3]; ?><br><br>
+  <input type="submit" name="submit" value="answer">
+</div>
+<?php
+if (!empty($_GET)) {
+	
+
+
+if ($_GET['answer'] == $qusts[$quest_rand][4]) {
+	echo "Great";
+}else{
+	echo "Incorrect";
+}
+}
+
+
+		$message=" зЕми тия 20 монети :)";
 		break;
 	case '10':
 		$sel10=$select;
-		echo "I";
 		if ($_SESSION['money']>100) {
 		$_SESSION['money']=$_SESSION['money']-100;
-		echo "Честито, купи хотел :)"; 
+		$message="Честито, купи хотел :)"; 
 		}else{
 			$_SESSION['money']=$_SESSION['money']-10;
 		}
@@ -103,30 +127,72 @@ switch ($_SESSION['temp']) {
 		break;
 	case '11':
 		$sel11=$select;
-		echo "N";
-		echo "Брао, бе! WINNER!!! :)";
+		$message="Брао, бе! WINNER!!! :)";
 		session_destroy();
 		break;
 	case '12':
 		$sel12=$select;
-		echo "P";
 		$_SESSION['money']=$_SESSION['money']-5;
-		echo " току-що изгуби 5 монети :(";
+		$message=" току-що изгуби 5 монети :(";
 		break;
+	case '13':
+		$sel13=$select;
+		
+		break;
+	case '14':
+		$sel14=$select;
+		
+		break;
+
+	case '15':
+		$sel15=$select;
+		
+		break;
+	case '16':
+		$sel16=$select;
+		
+		break;
+	case '17':
+
+		$sel17=$select;
+		
+		break;
+	case '18':
+		$sel18=$select;
+		
+		break;
+	case '19':
+		$sel19=$select;
+		
+		break;
+
+	case '20':
+		$sel20=$select;
+		
+		break;
+
 }
-//}
+
 
 ?>
 
 
 
 <style type="text/css">
+
+.quest{
+	width: 30%;
+	height: 200px;
+	/*background-color: green;*/
+	position: absolute;
+	top: 280;
+	left: 480px;
+}
 	.container{
 	position: relative;
-	top: 50px;
-
+	
 	top: 10px;
-	left: 20px;
+	left: 250px;
 	}
 	div{
 		position: absolute;
@@ -147,7 +213,6 @@ switch ($_SESSION['temp']) {
 		background-image: url('assets/pics/hotel.png');
 		left: 110px;<?php echo $sel2;?>
 	
-
 	}
 	.div3{
 		background-image: url('assets/pics/coins.png');
@@ -159,58 +224,102 @@ switch ($_SESSION['temp']) {
 	}
 	.div5{
 		background-image: url('assets/pics/coins.png');
-		top: 110px;
-		left: 330px;<?php echo $sel5;?>
+		
+		left: 440px;<?php echo $sel5;?>
 	}
 	.div6{
-	top: 220px;
-	left: 330px;
+	
+	left: 550px;
 	background-image: url('assets/pics/diamond.png');
 	<?php echo $sel6;?>
 	}
 	.div7{
 	background-image: url('assets/pics/hotel.png');
-	top: 330px;
-	left: 330px;<?php echo $sel7;?>
+	
+	left: 660px;<?php echo $sel7;?>
 	}
 	.div8{
 		background-image: url('assets/pics/coins.png');
-	top: 330px;
-	left: 220px;<?php echo $sel8;?>
+	
+	left: 770px;<?php echo $sel8;?>
 	}
 	.div9{
-		background-image: url('assets/pics/coins.png');
-	top:  330px;
-	left: 110px;<?php echo $sel9;?>
+		background-image: url('assets/pics/quest.png');
+	top:  110px;
+	left: 770px;<?php echo $sel9;?>
 	}
 	.div10{
 	background-image: url('assets/pics/hotel.png');
-	top: 330px;
-	left: 0px;<?php echo $sel10;?>
+	top: 220px;
+	left: 770px;<?php echo $sel10;?>
 	}
 	.div11{
 	background-image: url('assets/pics/winner.png');
-	top: 220px;<?php echo $sel11;?>
-	left: 0px;
-	}
+	left: 770px;
+	top: 330px;<?php echo $sel11;?>
 	
-	.div12{
-	background-image: url('assets/pics/beer.png');
-	top: 110px;
-	left: 0px;<?php echo $sel12;?>
 	}
+	.div12{
+	background-image: url('assets/pics/prison.png');
+	top: 330px;
+	left: 660px;<?php echo $sel12;?>
+	}
+	.div13{
+	background-image: url('assets/pics/quest.png');
+	top: 330px;
+	left: 550px;<?php echo $sel13;?>
+	}
+	.div14{
+	background-image: url('assets/pics/beer.png');
+	top: 330px;
+	left: 440px;<?php echo $sel14;?>
+	}
+	.div15{
+	background-image: url('assets/pics/horse.png');
+	top: 330px;
+	left: 330px;<?php echo $sel15;?>
+	}
+	.div16{
+	background-image: url('assets/pics/coins.png');
+	top: 330px;
+	left: 220px;<?php echo $sel16;?>
+	}
+	.div17{
+	background-image: url('assets/pics/prison.png');
+	top: 330px;
+	left: 110px;<?php echo $sel17;?>
+	}
+	.div18{
+	background-image: url('assets/pics/turbo.png');
+	top: 330px;
+	left: 0px;<?php echo $sel18;?>
+	}
+	.div19{
+	background-image: url('assets/pics/beer.png');
+	top: 220px;
+	left: 0px;<?php echo $sel19;?>
+	}
+	.div20{
+	background-image: url('assets/pics/coins.png');
+	top: 110px;
+	left: 0px;<?php echo $sel20;?>
+	}
+
+
+
 </style>
 <form method="" action="">
-<?php
-if ($_SESSION['count']>0) {
-	echo '<input type="submit" name="submit" value="submit">';
 
-	}
+<?php
+if ($_SESSION['count']>0) {?>
+	<input type="submit" name="submit" value="submit" onclick="alert('<?php echo $message;  ?> ')">
+
+<?php	}
 	else{
 		echo "GAME OVER!!";
 		session_destroy();
-	}
-?>
+	}?>
+
 
 </form>
 <a href="logout.php">LOG OUT</a>
@@ -227,7 +336,14 @@ if ($_SESSION['count']>0) {
 <div class="size div10">I</div>
 <div class="size div11">N</div>
 <div class="size div12">P</div>
-
+<div class="size div13">P</div>
+<div class="size div14">P</div>
+<div class="size div15">P</div>
+<div class="size div16">P</div>
+<div class="size div17">P</div>
+<div class="size div18">P</div>
+<div class="size div19">P</div>
+<div class="size div20">P</div>
 </div>
 <?php
 include('assets/includes/footer.php');

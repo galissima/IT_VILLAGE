@@ -1,6 +1,6 @@
 
 body{
-	background-image: url("assets/pics/da.png") ;
+	background-image: url("assets/pics/background.png") ;
 	background-image: no-repeat;
 	}
 	.login{
@@ -92,7 +92,7 @@ body{
 	left: 0px;<?php echo $sel10;?>
 	}
 .div11{
-	background-image: url('pics/winner.png');
+	background-image: url('assets/pics/winner.png');
 	top: 220px;<?php echo $sel11;?>
 	left: 0px;
 	}
@@ -102,14 +102,7 @@ body{
 	top: 110px;
 	left: 0px;<?php echo $sel12;?>
 	}
-.gameover{
-	width: 30%;
-	height: 200px;
-	background-color: red;
-	position: absolute;
-	top: 300px;
-	left: 400px;
-}
+
 .footer{
 	color: red;
 }

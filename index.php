@@ -49,8 +49,6 @@ if (!empty($_POST['submit'])) {
 }
 ?>
  
-   
-
 <style type="text/css">
 	body{
 	background-image: url("assets/pics/background.png") ;

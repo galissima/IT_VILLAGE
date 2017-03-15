@@ -4,19 +4,21 @@ include('assets/includes/header.php');
 ?>
 <link rel=stylesheet  type="text/css" href="assets/css/style.css">
 <div class="gameover">	
-<img src="assets/pics/game_over.png" alt="game_over" style="width:500px;height:300px; position: absolute; top: 170px; left: 100px;">
+
+<p id="game">GAME</p>
+<p id="over">OVER</p>
+<p id="score">SCORE:5345coins</p>
 
 </div>
 <a href="game.php" class="newgame">NewGame</a>
-<a href="game.php" class="logout">LogOut</a>
+<a href="index.php" class="logout">LogOut</a>
 
 <style>
 body{
     background-image: url("assets/pics/background.png");
 }
 .newgame{
-	 background-color: #008CBA;
-    border: none;
+	 background-color: #696;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -31,7 +33,7 @@ body{
 
 }
 .logout{
-     background-color: #008CBA;
+     background-color: #696;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -46,6 +48,44 @@ body{
    right: 250px;
 
 }
+.gameover{
+    position: relative;
+    top: 20px;
+    width: 80%;
+    height: 500px;
+   
 
+}
+
+#game {
+    color: #696;
+    font-size: 200px;
+    display: inline-block;
+    width: 5px;
+    margin-left: 30px;
+    position: absolute;
+    left: 100px;
+    top: -150px;
+    transform: rotate(-5deg);}
+#over {
+    color: #696;
+    font-size: 200px;
+    display: inline-block;
+    width: 5px;
+    margin-left: 30px;
+    position: absolute;
+    left: 200px;
+    top: -50px;
+    transform: rotate(-5deg);}
+ #score {
+    color: #696;
+    font-size: 70px;
+    display: inline-block;
+    width: 5px;
+    margin-left: 30px;
+    position: absolute;
+    left: 400px;
+    top: 300px;
+    /*transform: rotate(-5deg);}*/
 
 </style>
