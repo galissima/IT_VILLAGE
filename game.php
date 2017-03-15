@@ -45,7 +45,7 @@ switch ($_SESSION['temp']) {
 		$sel2=$select;
 		if ($_SESSION['money']>100) {
 		$_SESSION['money']=$_SESSION['money']-100;
-		echo "Честито, купи хотел :)"; 
+		$message="Честито, купи хотел :)"; 
 		}else{
 			$_SESSION['money']=$_SESSION['money']-10;
 			$message="Нощувка - 10 лв";
