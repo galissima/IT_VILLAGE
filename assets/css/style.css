@@ -45,17 +45,19 @@ body{
 	.quest{
 	width: 30%;
 	height: 200px;
+	/*background-color: green;*/
 	position: absolute;
 	top: 280;
 	left: 480px;
-	}
-
-	.container{
+}
+.container{
 	position: relative;
+	border: 1px solid black;
+	width: 1450px;
+	height: 500px;
 	top: 10px;
-	left: 250px;
+	left: 40px;
 	}
-
 	div{
 		position: absolute;
 		top: 0;
@@ -68,117 +70,123 @@ body{
 	}
 
 	.div1{
-	background-image: url('assets/pics/beer.png');
-	<?php echo $sel1;?>
+	background-image: url('../pics/beer.png');
 	}
-
 	.div2{
-		background-image: url('assets/pics/hotel.png');
-		left: 110px;<?php echo $sel2;?>
-	
+	background-image: url('../pics/hotel.png');
+	left: 110px;
 	}
 	.div3{
-		background-image: url('assets/pics/coins.png');
-		left: 220px;<?php echo $sel3;?>
+	background-image: url('../pics/coins.png');
+	left: 220px;
 	}
 	.div4{
-		background-image: url('assets/pics/storm.png');
-		left: 330px;<?php echo $sel4;?>
+	background-image: url('../pics/storm.png');
+	left: 330px;
 	}
 	.div5{
-		background-image: url('assets/pics/coins.png');
-		
-		left: 440px;<?php echo $sel5;?>
+	background-image: url('../pics/coins.png');
+	left: 440px;
 	}
 	.div6{
-	
-		left: 550px;
-		background-image: url('assets/pics/diamond.png');
-		<?php echo $sel6;?>
+	background-image: url('../pics/diamond.png');
+	left: 550px;
 	}
-
 	.div7{
-		background-image: url('assets/pics/hotel.png');
-	
-		left: 660px;<?php echo $sel7;?>
+	background-image: url('../pics/hotel.png');
+	left: 660px;
 	}
-
 	.div8{
-		background-image: url('assets/pics/coins.png');
-	
-		left: 770px;<?php echo $sel8;?>
+	background-image: url('../pics/coins.png');
+	left: 770px;
 	}
-
 	.div9{
-		background-image: url('assets/pics/quest.png');
-		top:  110px;
-		left: 770px;<?php echo $sel9;?>
+	background-image: url('../pics/quest.png');
+	left: 880px; top: 0;
 	}
-
 	.div10{
-		background-image: url('assets/pics/hotel.png');
-		top: 220px;
-		left: 770px;<?php echo $sel10;?>
+	background-image: url('../pics/hotel.png');
+	left: 990px; top: 0;
 	}
-
 	.div11{
-		background-image: url('assets/pics/winner.png');
-		left: 770px;
-		top: 330px;<?php echo $sel11;?>
-	
+	background-image: url('../pics/winner.png');
+	left: 1100px; top: 0;
 	}
-
 	.div12{
-		background-image: url('assets/pics/prison.png');
-		top: 330px;
-		left: 660px;<?php echo $sel12;?>
+	background-image: url('../pics/prison.png');
+	left: 1210px; top: 0;
 	}
-
 	.div13{
-		background-image: url('assets/pics/quest.png');
-		top: 330px;
-		left: 550px;<?php echo $sel13;?>
+	background-image: url('../pics/quest.png');
+	left: 1320px; top: 0;
 	}
-
 	.div14{
-		background-image: url('assets/pics/beer.png');
-		top: 330px;
-		left: 440px;<?php echo $sel14;?>
+	background-image: url('../pics/beer.png');
+	left: 1320px; top: 110px;
 	}
-
 	.div15{
-		background-image: url('assets/pics/horse.png');
-		top: 330px;
-		left: 330px;<?php echo $sel15;?>
+	background-image: url('../pics/horse.png');
+	left: 1320px; top: 220px;
 	}
-
 	.div16{
-		background-image: url('assets/pics/coins.png');
-		top: 330px;
-		left: 220px;<?php echo $sel16;?>
+	background-image: url('../pics/coins.png');
+	left: 1320px; top: 330px;
 	}
-
 	.div17{
-		background-image: url('assets/pics/prison.png');
-		top: 330px;
-		left: 110px;<?php echo $sel17;?>
+	background-image: url('../pics/prison.png');
+	left: 1210px; top: 330px;
 	}
-
 	.div18{
-		background-image: url('assets/pics/turbo.png');
-		top: 330px;
-		left: 0px;<?php echo $sel18;?>
+	background-image: url('../pics/turbo.png');
+	left: 1100px; top: 330px;
 	}
-
 	.div19{
-		background-image: url('assets/pics/beer.png');
-		top: 220px;
-		left: 0px;<?php echo $sel19;?>
+	background-image: url('../pics/beer.png');
+	left: 990px; top: 330px;
 	}
 	.div20{
-		background-image: url('assets/pics/coins.png');
-		top: 110px;
-		left: 0px;<?php echo $sel20;?>
+	background-image: url('../pics/coins.png');
+	left: 880px; top: 330px;
+	}
+	.div21{
+	background-image: url('../pics/coins.png');
+	left: 770px; top: 330px;
+	}
+	.div22{
+	background-image: url('../pics/coins.png');
+	left: 660px; top: 330px;
+	}
+	.div23{
+	background-image: url('../pics/hotel.png');
+	left: 550px; top: 330px;
+	}
+	.div24{
+	background-image: url('../pics/coins.png');
+	left: 440px; top: 330px;
+	}
+	.div25{
+	background-image: url('../pics/coins.png');
+	left: 330px; top: 330px;
+	}
+	.div26{
+	background-image: url('../pics/coins.png');
+	left: 220px; top: 330px;
+	}
+	.div27{
+	background-image: url('../pics/coins.png');
+	left: 110px; top: 330px;
+	}
+	.div28{
+	background-image: url('../pics/hotel.png');
+	left: 0px; top: 330px;
+	}
+	.div29{
+	background-image: url('../pics/coins.png');
+	left: 0px; top: 220px;
+	}
+	.div30{
+	background-image: url('../pics/coins.png');
+	left: 0px; top: 110px;
 	}
 	
 	/* game_over file*/
@@ -255,9 +263,9 @@ body{
     /*transform: rotate(-5deg);}*/
 	}
 
-	/*.footer{
+	.footer{
 		color: red;
 		position: absolute;
-		bottom: 0;
+		top: 660px;
 		right: 0;
-	}*/
+	}

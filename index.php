@@ -8,7 +8,12 @@ session_start();
 // check
 if (!empty($_POST['submit'])) {
 	$_SESSION['count'] = rand(10,20);
-	$_SESSION['money'] = rand(50,100);
+	$_SESSION['money'] = rand(50,200);
+	$_SESSION['hotel2'] = 0;
+	$_SESSION['hotel7'] = 0;
+	$_SESSION['hotel10'] = 0;
+	$_SESSION['hotel23'] = 0;
+	$_SESSION['hotel28'] = 0;
 	$_SESSION['user_name'] = $_POST['user_name'];
 	$_SESSION['user_password'] = $_POST['user_password'];
 	echo "Hello, ".$_POST['user_name'];
