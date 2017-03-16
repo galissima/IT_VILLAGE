@@ -7,7 +7,7 @@ echo '<a href="register.php">REGISTER</a>';
 session_start();
 // check
 if (!empty($_POST['submit'])) {
-	$_SESSION['count'] = rand(10,20);
+	$_SESSION['count'] = rand(30,50);
 	$_SESSION['money'] = rand(50,200);
 	$_SESSION['hotel2'] = 0;
 	$_SESSION['hotel7'] = 0;

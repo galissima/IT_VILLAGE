@@ -17,7 +17,7 @@ body{
 		width: 60%;
 		height: 40px;
 
-	}
+	} 
 
 	/* Register.php file*/
 
@@ -109,7 +109,7 @@ body{
 	left: 990px; top: 0;
 	}
 	.div11{
-	background-image: url('../pics/winner.png');
+	background-image: url('../pics/storm.png');
 	left: 1100px; top: 0;
 	}
 	.div12{
@@ -145,7 +145,7 @@ body{
 	left: 990px; top: 330px;
 	}
 	.div20{
-	background-image: url('../pics/coins.png');
+	background-image: url('../pics/quest.png');
 	left: 880px; top: 330px;
 	}
 	.div21{
@@ -153,7 +153,7 @@ body{
 	left: 770px; top: 330px;
 	}
 	.div22{
-	background-image: url('../pics/coins.png');
+	background-image: url('../pics/beer.png');
 	left: 660px; top: 330px;
 	}
 	.div23{
@@ -165,11 +165,11 @@ body{
 	left: 440px; top: 330px;
 	}
 	.div25{
-	background-image: url('../pics/coins.png');
+	background-image: url('../pics/quest.png');
 	left: 330px; top: 330px;
 	}
 	.div26{
-	background-image: url('../pics/coins.png');
+	background-image: url('../pics/horse.png');
 	left: 220px; top: 330px;
 	}
 	.div27{
@@ -185,7 +185,7 @@ body{
 	left: 0px; top: 220px;
 	}
 	.div30{
-	background-image: url('../pics/coins.png');
+	background-image: url('../pics/winner.png');
 	left: 0px; top: 110px;
 	}
 	
