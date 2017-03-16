@@ -1,9 +1,6 @@
-
-
-
 <?php
 $title = 'Index';
-include('assets/includes/header.php');
+include('includes/header.php');
 include('db_connection.php');
 
 echo '<a href="register.php">REGISTER</a>';
@@ -51,5 +48,5 @@ if (!empty($_POST['submit'])) {
 </div>
 
 <?php
-include('assets/includes/footer.php');
+include('includes/footer.php');
 ?>

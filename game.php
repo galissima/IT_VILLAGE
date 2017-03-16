@@ -1,6 +1,6 @@
 <?php	
 $title = 'Game';
-include('assets/includes/header.php');
+include('includes/header.php');
  
 session_start();
 $select= "border: 4px solid red;"; 
@@ -17,17 +17,17 @@ echo $_SESSION['temp'] . "<br>";
 $_SESSION['temp'] = $_SESSION['temp'] + $rand;
 echo $_SESSION['temp'];
    
+include('includes/quest.php');
+// $qusts[1][0] = "kak se kazvam";
+// $qusts[1][1] ="mitko" ;
+// $qusts[1][2] = "kolio" ;
+// $qusts[1][3] = "correct" ;
 
-$qusts[1][0] = "kak se kazvam";
-$qusts[1][1] ="mitko" ;
-$qusts[1][2] = "kolio" ;
-$qusts[1][3] = "correct" ;
 
-
-$qusts[2][0] = "kak se kazva galq";
-$qusts[2][1] ="mitko galq" ;
-$qusts[2][2] = "kolio galq" ;
-$qusts[2][3] = "correct galq" ;
+// $qusts[2][0] = "kak se kazva galq";
+// $qusts[2][1] ="mitko galq" ;
+// $qusts[2][2] = "kolio galq" ;
+// $qusts[2][3] = "correct galq" ;
 
 
 if ($_SESSION['temp']>20) {
@@ -39,13 +39,13 @@ switch ($_SESSION['temp']) {
 	case '1':
 		$sel1=$select;
 		$_SESSION['money']=$_SESSION['money']-5;
-		$message="току-що изгуби 5 монети :(";
+		$message="Добре дошъл местния бар! Предлагаме само жива бира. Губиш 5 монети :(";
 		break;
 	case '2':
 		$sel2=$select;
 		if ($_SESSION['money']>100) {
 		$_SESSION['money']=$_SESSION['money']-100;
-		$message="Честито, купи хотел :)"; 
+		$message= "Честито, купи си хотел 'ХЕМУС' :)"; 
 		}else{
 			$_SESSION['money']=$_SESSION['money']-10;
 			$message="Нощувка - 10 лв";
@@ -59,7 +59,7 @@ switch ($_SESSION['temp']) {
 	case '4':
 		$sel4=$select;
 		$_SESSION['count']=$_SESSION['count']-2;
-		$message=" Wi-Fi - я ГРЪМНА!!! Губиш 2 хода :(" ;
+		$message=" Неизправност в свързването с WI_FI мрежата. Моля, свържете се с оператор. Пропускате два хода :(" ;
 		break;
 	case '5':
 		$sel5=$select;
@@ -75,7 +75,7 @@ switch ($_SESSION['temp']) {
 		$sel7=$select;
 		if ($_SESSION['money']>100) {
 		$_SESSION['money']=$_SESSION['money']-100;
-		$message="Честито, купи хотел :)"; 
+		$message="Честито, купи си хотел 'Чайка' :)"; 
 		}else{
 			$_SESSION['money']=$_SESSION['money']-10;
 		}
@@ -135,7 +135,7 @@ if (!empty($_POST)) {
 		$sel10=$select;
 		if ($_SESSION['money']>100) {
 		$_SESSION['money']=$_SESSION['money']-100;
-		$message="Честито, купи хотел :)"; 
+		$message="Честито, купи си хотел 'Кипарис' :)"; 
 		}else{
 			$_SESSION['money']=$_SESSION['money']-10;
 		}
@@ -149,7 +149,7 @@ if (!empty($_POST)) {
 	case '12':
 		$sel12=$select;
 		$_SESSION['count']=$_SESSION['count']-5;
-		$message=" Задържан сте за кражба на Wi-Fi :(" ;
+		$message="ШПИОНИН В МРЕЖАТА! Обвинен сте в кражбата на 10 000 номера на кредитни карти от търговски компютър в Райфайзенбанк - Враца. Отивате във Врачанския затвор и губите 5 хода!!!";
 		break;
 	case '13':
 		$sel13=$select;
@@ -200,13 +200,13 @@ if (!empty($_POST)) {
 	case '14':
 		$sel14=$select;
 		$_SESSION['money']=$_SESSION['money']-5;
-		$message="току-що изгуби 5 монети :(";
+		$message="Днес е време да почерпиш. Сметката е 5 монети :(";
 		break;
 
 	case '15':
 		$sel15=$select;
 		$_SESSION['money']=$_SESSION['money']-100;
-		$message=" Ти беше захапан от Троянски Кон - 100 монети надоло!";
+		$message=" Ти беше захапан от Троянски Кон - 100 монети надолу!";
 		break;
 	case '16':
 		$sel16=$select;
@@ -217,7 +217,7 @@ if (!empty($_POST)) {
 	case '17':
 		$sel17=$select;
 		$_SESSION['count']=$_SESSION['count']-7;
-		$message=" Задържан сте за кражба  ГОЛЯМА на Wi-Fi :(" ;
+		$message=" ШПИОНИН В МРЕЖАТА! Обвинен сте в нелегално източване на данни от сървъра на ВСО. Попдате във Врачанския затвор и губите 5 хода!!! :(" ;
 		break;
 	case '18':
 		$sel18=$select;
@@ -228,7 +228,7 @@ if (!empty($_POST)) {
 	case '19':
 		$sel19=$select;
 		$_SESSION['money']=$_SESSION['money']-5;
-		$message="току-що изгуби 5 монети :(";
+		$message="Оправи си вересиите. Имаш неплатена сметка в бара. Губиш 5 монети :(";
 		break;
 
 	case '20':
@@ -410,5 +410,5 @@ if ($_SESSION['money'] <= 0 || $_SESSION['count'] <= 0  ) {
 <div class="size div20">C</div>
 </div>
 <?php
-include('assets/includes/footer.php');
+include('includes/footer.php');
 ?>

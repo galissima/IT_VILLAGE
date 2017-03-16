@@ -1,6 +1,6 @@
 
 body{
-	background-image: url("assets/pics/background.png") ;
+	background-image: url("../pics/background.png") ;
 	background-image: no-repeat;
 	}
 
@@ -255,9 +255,9 @@ body{
     /*transform: rotate(-5deg);}*/
 	}
 
-	.footer{
+	/*.footer{
 		color: red;
 		position: absolute;
 		bottom: 0;
 		right: 0;
-	}
+	}*/
