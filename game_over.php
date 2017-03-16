@@ -11,7 +11,7 @@ include('assets/includes/header.php');
 <p id="score">SCORE: <?php echo $_SESSION['money'] ?> </p>
 
 </div>
-<a href="game.php" class="newgame">NewGame</a>
+<a href="scores.php" class="newgame">NewGame</a>
 <a href="index.php" class="logout">LogOut</a>
 
 <?php
