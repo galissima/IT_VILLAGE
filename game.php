@@ -3,6 +3,22 @@ $title = 'Game';
 include('includes/header.php');
 include('includes/quest.php');
 session_start();
+
+if (!empty($_POST)) {
+	if ($_POST['answer'] ==  $_POST['correct_answer']) {
+		
+		$_SESSION['count']=$_SESSION['count']+20;
+		$_SESSION['money']=$_SESSION['money']+400;
+		echo "Верен Отговор +20 хвърляния и +400 монети";// siltizaciq
+	}else{
+		$_POST['answer'];
+		$_SESSION['money']=$_SESSION['money']-50;
+		echo "Incorrect answer - 50  coins"; // siltizaciq
+	}
+	unset($_POST);
+} 
+
+
 $select= "border: 4px solid red;"; 
 $_SESSION['count']=$_SESSION['count']-1;
 
@@ -24,7 +40,7 @@ if ($_SESSION['temp']>30) {
 	$_SESSION['temp']=$_SESSION['temp']-30;
 }
 echo "<br>" . $_SESSION['temp'] . "<br>";
-
+//$_SESSION['temp']=30;
 switch ($_SESSION['temp']) {
 	case '1':
 		$sel1=$select;
@@ -113,9 +129,9 @@ include('includes/form.php');
 		}
 		break;
 	case '11':
-		$sel11=$select;
-		$message="Брао, бе! WINNER!!! :)";
-		session_destroy();
+		$sel12=$select;
+		$_SESSION['count']=$_SESSION['count']-2;
+		$message=" Неизправност в свързването с WI_FI мрежата. Моля, свържете се с оператор. Пропускате два хода :(" ;
 		break;
 	case '12':
 		$sel12=$select;
@@ -124,11 +140,7 @@ include('includes/form.php');
 		break;
 	case '13':
 		$sel13=$select;
-
 		include('includes/form.php');
-
-
-
 		break;
 	case '14':
 		$sel14=$select;
@@ -166,8 +178,7 @@ include('includes/form.php');
 
 	case '20':
 		$sel20=$select;
-		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		include('includes/form.php');
 		break;
 	case '20':
 		$sel20=$select;
@@ -181,8 +192,8 @@ include('includes/form.php');
 		break;
 	case '22':
 		$sel22=$select;
-		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$_SESSION['money']=$_SESSION['money']-5;
+		$message="Оправи си вересиите. Имаш неплатена сметка в бара. Губиш 5 монети :(";
 		break;
 	case '23':
 		$sel23=$select;
@@ -208,13 +219,12 @@ include('includes/form.php');
 		break;
 	case '25':
 		$sel25=$select;
-		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+include('includes/form.php');
 		break;
 	case '26':
 		$sel26=$select;
-		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$_SESSION['money']=$_SESSION['money']-100;
+		$message=" Ти беше захапан от Троянски Кон - 100 монети надолу!";
 		break;
 	case '27':
 		$sel27=$select;
@@ -245,8 +255,8 @@ include('includes/form.php');
 		break;
 	case '30':
 		$sel30=$select;
-		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$_SESSION['result']="Брао, бе! WINNER!!! :)";
+		header('Location: game_over.php');
 		break;
 
 
@@ -261,13 +271,23 @@ if ($_SESSION['hotel10']==1) {
 $select10= "border: 4px solid green;"; 
 }
 if ($_SESSION['hotel23']==1) {
-$select10= "border: 4px solid green;"; 
+$select23= "border: 4px solid green;"; 
 }
 if ($_SESSION['hotel28']==1) {
-$select10= "border: 4px solid green;"; 
+$select28= "border: 4px solid green;"; 
 }
-if ($_SESSION['money'] <= 0 || $_SESSION['count'] <= 0  ) {
+if ($_SESSION['money'] <= 0 ) {
+	$_SESSION['result']="Ти остана без пукната пара !";
 	header('Location: game_over.php');
+}
+
+if ($_SESSION['count'] <= 0  ) {
+	$_SESSION['result']="Свършиха ти ходовете !!";
+	header('Location: game_over.php');
+}
+
+if ($_SESSION['hotel2']==1 and $_SESSION['hotel7']==1 and $_SESSION['hotel10']==1 and $_SESSION['hotel23']==1 and $_SESSION['hotel28']==1 ) {
+	$_SESSION['result']="Ти Притежаваш Всичко";
 }
 
 ?>
@@ -332,17 +352,17 @@ if ($_SESSION['money'] <= 0 || $_SESSION['count'] <= 0  ) {
 <div class="size div17">P</div>
 <div class="size div18">T</div>
 <div class="size div19">B</div>
-<div class="size div20">C</div>
+<div class="size div20">Q</div>
 <div class="size div21">C</div>
-<div class="size div22">C</div>
+<div class="size div22">B</div>
 <div class="size div23">H</div>
 <div class="size div24">C</div>
-<div class="size div25">C</div>
-<div class="size div26">C</div>
+<div class="size div25">Q</div>
+<div class="size div26">T</div>
 <div class="size div27">C</div>
 <div class="size div28">H</div>
 <div class="size div29">C</div>
-<div class="size div30">C</div>
+<div class="size div30">W</div>
 </div>
 <?php
 include('includes/footer.php');
