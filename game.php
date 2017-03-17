@@ -1,4 +1,4 @@
-<?php	
+<?php
 $title = 'Game';
 include('includes/header.php');
 include('includes/quest.php');

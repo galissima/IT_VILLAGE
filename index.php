@@ -1,4 +1,4 @@
-<?php
+<?php 
 $title = 'Index';
 include('includes/header.php');
 include('db_connection.php');
