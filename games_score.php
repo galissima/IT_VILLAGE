@@ -3,22 +3,22 @@
 
 // READ 
 
-
+include('includes/header.php');
 include('db_connection.php');
-//READ ROWS FROM TABLE GAMES
-$read_query = "SELECT * FROM `games` JOIN `users` ON `games`.`game_id` = `users`.`user_id`";
+//READ ROWS FROM TABLE GAMES     SELECT * FROM `users` ORDER BY `user_current_score` DESC
+$read_query = "SELECT * FROM `users` ORDER BY `user_sum_score` DESC ";
 $result = mysqli_query($conn, $read_query);
 
 
 if (mysqli_num_rows($result) > 0) {
-	echo "<table border=1>";
-	echo "<tr><th>GAME_ID</th><th>USER_ID</th><th>GAME_SCORE</th>";
+	echo "<table border=1 >";
+	echo "<tr><th>User name </th><th>Total Score</th>";
 	while ($row = mysqli_fetch_assoc($result)) {
 		echo "<tr>";
 		
-			echo "<td>" . $row['game_id'] . "</td>";
+			
 			echo "<td>" . $row['user_name'] . "</td>";
-			echo "<td>" .$row['game_score'] . "</td>";
+			echo "<td>" .$row['user_sum_score'] . "</td>";
 			
 			
 		echo "<tr>";
@@ -27,6 +27,10 @@ if (mysqli_num_rows($result) > 0) {
 
 	echo "</table>";
 }
+?>
+<a href="games_score.php" class="newgame" id="hover1">Klasaciq</a>
+<a href="index.php" class="logout" id="hover2">LogOut</a>
+<?php
 
 
 // include('db_connection.php');
@@ -54,29 +58,6 @@ if (mysqli_num_rows($result) > 0) {
 // 	echo "</table>";
 
 //}
-session_start();
-$read_query ="SELECT `game_score` FROM `games` WHERE `user_id`= 2";
-$result = mysqli_query($conn, $read_query);
-$row = mysqli_fetch_assoc($result);
-echo $row['game_score'];
-
-	 $_SESSION['user_result']= $_SESSION['money'] + $row['game_score'];
-
-
-
-$update_query ="UPDATE `games` SET`game_score`= $_SESSION['user_result'] WHERE `user_id` = 2";
-
-
-$result = mysqli_query($conn, $update_query);
-
-	if ($result) {
-		return header('Location: read_duration.php');  
-	} else {
-	echo "Error: " . $update_query . " - " . mysqli_error($conn);
-	}
-
-
-
 
 
 
