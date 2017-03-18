@@ -34,17 +34,14 @@ $_SESSION['count']=$_SESSION['count']-1;
 // echo "Брой хвърляния:" . $_SESSION['count'] . "<br>" ;
 // echo "Текуща сума: " . $_SESSION['money'] ." Монети ";
 ?>
-<div class="count"> Брой хвърляния: <?php '' . $_SESSION['count'] . "<br>" ;?> </div>
-<div class="current_sum"> Tекуща сума: <?php '' . $_SESSION['money'] . " Монети ";?> </div>
+<div class="count"> Брой хвърляния: <?php echo $_SESSION['count'] . "<br>" ;?> </div>
+<div class="current_sum"> Tекуща сума: <?php echo  $_SESSION['money'] .  " Монети ";?> </div>
 
 <?php
 $rand=rand(1,6);
 
-echo "<br>Зарче: " . $rand . "<br>";
-
-echo $_SESSION['temp'] . "<br>";
 $_SESSION['temp'] = $_SESSION['temp'] + $rand;
-echo $_SESSION['temp'];
+echo "<div class='position'>Позиция: " . $_SESSION['temp']. "</div>";
    
 
 
@@ -344,7 +341,7 @@ if ($_SESSION['hotel2']==1 and $_SESSION['hotel7']==1 and $_SESSION['hotel10']==
 <form method="" action="">
 
 
-	<input type="submit" name="submit" value="submit" onclick="alert('<?php echo $message;  ?> ')">
+	<input type="submit" name="submit" value="ЗарЪТ: <?php echo $rand ;?>" class="dice"onclick="alert('<?php echo $message;  ?> ')">
 
 </form>
 <a href="logout.php">LOG OUT</a>
@@ -359,7 +356,7 @@ if ($_SESSION['hotel2']==1 and $_SESSION['hotel7']==1 and $_SESSION['hotel10']==
 <div class="size div8">C</div>
 <div class="size div9">Q</div>
 <div class="size div10">H</div>
-<div class="size div11">W</div>
+<div class="size div11">S</div>
 <div class="size div12">P</div>
 <div class="size div13">Q</div>
 <div class="size div14">B</div>
