@@ -1,6 +1,6 @@
 <?php
 
-
+$_SESSION['answer_check']=2;
 $message="Дали направи правилният избор ?";
 $quest_rand = rand(1,2);
 $quest_temp = rand(1,3);
