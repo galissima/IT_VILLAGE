@@ -70,7 +70,7 @@ body{
 	height: 200px;
 	
 	
-	z-index: 2;
+	/*z-index: 2;*/
 }
 	.container{
 	position: relative;

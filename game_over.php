@@ -2,6 +2,7 @@
 session_start();
 $title = 'GameOver';
 include('includes/header.php');
+include('db_connection.php');
 ?>
 
 <div class="gameover">	
@@ -16,6 +17,31 @@ include('includes/header.php');
 
 <?php
 include('includes/footer.php');
+
+$read_query ="SELECT `game_score` FROM `games` WHERE `user_id`= 2";
+$result = mysqli_query($conn, $read_query);
+$row = mysqli_fetch_assoc($result);
+echo $row['game_score'];
+
+	 $user_result= $_SESSION['money'] + $row['game_score'];
+echo" " . $_SESSION['user_result'] . "---";
+
+
+$update_query = "UPDATE `games` SET`game_score`= $user_result WHERE `user_id` = 2 ";
+
+
+$result = mysqli_query($conn, $update_query);
+
+	if ($result) {
+		echo "brao";  
+	} else {
+	echo "Error: " . $update_query . " - " . mysqli_error($conn);
+	}
+
+
+
+
+
 ?>
 
 
