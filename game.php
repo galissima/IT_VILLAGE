@@ -51,6 +51,8 @@ echo $_SESSION['temp'];
 
 if ($_SESSION['temp']>30) {
 	$_SESSION['temp']=$_SESSION['temp']-30;
+	$_SESSION['money']=$_SESSION['money']+100;
+	echo "+100 Монети за завършена обиколка!";
 }
 echo "<br>" . $_SESSION['temp'] . "<br>";
 //$_SESSION['temp']=9;
