@@ -42,7 +42,7 @@ body{
 
 	/* game.php file*/
 	.count{
-		background-color: green;
+		background-color: red;
 		position: relative;
 		top: 5px;
 		left: 20px
@@ -56,25 +56,34 @@ body{
 		left: 0px;
 		width: 80px;
 		width: 120px;
-		background-color: green;
+		background-color: red;
 		
-
-
 	}
 	.quest{
 	position: absolute;
-	/*top:600;*/
-	margin-top: 270px;
-	left: 500px;	
+	margin-top: 300px;
+	left: 600px;	
 	width: 30%;
 	height: 200px;
-	
-	
-	/*z-index: 2;*/
+	z-index: 2;
+	font-family: Georgia;
+	font-size: 20px;
+	color: #696;
 }
+	.correct{
+	color: red;
+	position: absolute;
+	margin-top: 350px;
+	left: 600px;
+	width: 21%;
+	height: 30px;
+	font-size: 24px;
+	z-index: 2;
+
+	}
 	.container{
 	position: relative;
-
+	background-color: yellow;
 	width: 1450px;
 	height: 500px;
 	top: 10px;
