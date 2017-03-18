@@ -11,11 +11,12 @@ if (!empty($_POST['answer'])) {
 		
 		$_SESSION['count']=$_SESSION['count']+20;
 		$_SESSION['money']=$_SESSION['money']+400;
-		echo "Верен Отговор +20 хвърляния и +400 монети";// siltizaciq
+		?><div class="correct">Верен Отговор!!!<br> Получаваш 20 хвърляния и 400 монети ;)</div><?php
 	}else{
 		$_POST['answer'];
 		$_SESSION['money']=$_SESSION['money']-50;
-		echo "Incorrect answer - 50  coins"; // siltizaciq
+		echo "Incorrect answer - 50  coins"; 
+		?><div class="incorrect">Грешен отговор!!!<br> Губиш 50 монети ;(</div><?php
 	}
 	unset($_POST);
 	 $_SESSION['answer_check']=3;
@@ -30,9 +31,13 @@ echo "Кофри User - забрави да отгожориш а?";
 $select= "border: 4px solid red;"; 
 $_SESSION['count']=$_SESSION['count']-1;
 
-echo "Брой хвърляния:" . $_SESSION['count'] . "<br>" ;
-echo "Текуща сума: " . $_SESSION['money'] ." Монети ";
+// echo "Брой хвърляния:" . $_SESSION['count'] . "<br>" ;
+// echo "Текуща сума: " . $_SESSION['money'] ." Монети ";
+?>
+<div class="count"> Брой хвърляния: <?php '' . $_SESSION['count'] . "<br>" ;?> </div>
+<div class="current_sum"> Tекуща сума: <?php '' . $_SESSION['money'] . " Монети ";?> </div>
 
+<?php
 $rand=rand(1,6);
 
 echo "<br>Зарче: " . $rand . "<br>";
@@ -48,7 +53,7 @@ if ($_SESSION['temp']>30) {
 	$_SESSION['temp']=$_SESSION['temp']-30;
 }
 echo "<br>" . $_SESSION['temp'] . "<br>";
-//$_SESSION['temp']=30;
+$_SESSION['temp']=9;
 switch ($_SESSION['temp']) {
 	case '1':
 		$sel1=$select;
