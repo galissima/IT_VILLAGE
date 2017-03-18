@@ -22,30 +22,32 @@ if (!empty($_POST)) {
 $select= "border: 4px solid red;"; 
 $_SESSION['count']=$_SESSION['count']-1;
 
-echo "Брой хвърляния:" . $_SESSION['count'] . "<br>" ;
-echo "Текуща сума: " . $_SESSION['money'] ." Монети ";
+?>
+<div class="count">Брой хвърляния: <?php echo $_SESSION['count'] . "<br>" ;?></div>
+<div class="current_sum">Текуща сума: <?php echo $_SESSION['count'] . "<br>" ;?></div>
+<?php
+
 
 $rand=rand(1,6);
-
-echo "<br>Зарче: " . $rand . "<br>";
-
+?>
+<div class="dice">Зарче: " <?php echo "<br>" . $rand . "<br>";?></div>
+<?php
 echo $_SESSION['temp'] . "<br>";
 $_SESSION['temp'] = $_SESSION['temp'] + $rand;
 echo $_SESSION['temp'];
    
 
 
-
 if ($_SESSION['temp']>30) {
 	$_SESSION['temp']=$_SESSION['temp']-30;
 }
 echo "<br>" . $_SESSION['temp'] . "<br>";
-//$_SESSION['temp']=30;
+// $_SESSION['temp']=9;
 switch ($_SESSION['temp']) {
 	case '1':
 		$sel1=$select;
 		$_SESSION['money']=$_SESSION['money']-5;
-		$message="Добре дошъл местния бар! Предлагаме само жива бира. Губиш 5 монети :(";
+		$message="Добре дошъл местния бар! Предлагаме само жива бира. Губиш 5 монети 😞";
 		break;
 	case '2':
 		$sel2=$select;
@@ -54,7 +56,7 @@ switch ($_SESSION['temp']) {
 			if ($_SESSION['money']>100) {
 			$_SESSION['money']=$_SESSION['money']-100;
 			$_SESSION['hotel2']=1;
-			$message="Честито, купи хотел :)"; 
+			$message="Честито, купи хотел 🙂"; 
 			}else{
 				$_SESSION['money']=$_SESSION['money']-10;
 				$message="Нощувка в хотела - 10";
@@ -67,22 +69,22 @@ switch ($_SESSION['temp']) {
 	case '3':
 		$sel3=$select;
 		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети 🙂";
 		break;
 	case '4':
 		$sel4=$select;
 		$_SESSION['count']=$_SESSION['count']-2;
-		$message=" Неизправност в свързването с WI_FI мрежата. Моля, свържете се с оператор. Пропускате два хода :(" ;
+		$message=" Неизправност в свързването с WI_FI мрежата. Моля, свържете се с оператор. Пропускате два хода 😞" ;
 		break;
 	case '5':
 		$sel5=$select;
 		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети 🙂";
 		break;
 	case '6':
 		$sel6=$select;
 		$_SESSION['money']=$_SESSION['money']*10;
-		$message="УАУ!Вашата сума се умножава по 10!!! :)";
+		$message="УАУ!Вашата сума се умножава по 10!!! 🙂";
 		break;
 	case '7':
 		$sel7=$select;
@@ -91,7 +93,7 @@ switch ($_SESSION['temp']) {
 			if ($_SESSION['money']>100) {
 			$_SESSION['money']=$_SESSION['money']-100;
 			$_SESSION['hotel7']=1;
-			$message="Честито, купи хотел :)"; 
+			$message="Честито, купи хотел 🙂"; 
 			}else{
 				$_SESSION['money']=$_SESSION['money']-10;
 				$message="Нощувка в хотела - 10";
@@ -104,7 +106,7 @@ switch ($_SESSION['temp']) {
 	case '8':
 		$sel8=$select;
 		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети 🙂";
 		break;
 	case '9':
 		$sel9=$select;
@@ -118,7 +120,7 @@ include('includes/form.php');
 			if ($_SESSION['money']>100) {
 			$_SESSION['money']=$_SESSION['money']-100;
 			$_SESSION['hotel10']=1;
-			$message="Честито, купи хотел :)"; 
+			$message="Честито, купи хотел 🙂"; 
 			}else{
 				$_SESSION['money']=$_SESSION['money']-10;
 				$message="Нощувка в хотела - 10";
@@ -131,7 +133,7 @@ include('includes/form.php');
 	case '11':
 		$sel12=$select;
 		$_SESSION['count']=$_SESSION['count']-2;
-		$message=" Неизправност в свързването с WI_FI мрежата. Моля, свържете се с оператор. Пропускате два хода :(" ;
+		$message=" Неизправност в свързването с WI_FI мрежата. Моля, свържете се с оператор. Пропускате два хода 😞" ;
 		break;
 	case '12':
 		$sel12=$select;
@@ -145,7 +147,7 @@ include('includes/form.php');
 	case '14':
 		$sel14=$select;
 		$_SESSION['money']=$_SESSION['money']-5;
-		$message="Днес е време да почерпиш. Сметката е 5 монети :(";
+		$message="Днес е време да почерпиш. Сметката е 5 монети 😞";
 		break;
 
 	case '15':
@@ -156,13 +158,13 @@ include('includes/form.php');
 	case '16':
 		$sel16=$select;
 		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети 🙂";
 		
 		break;
 	case '17':
 		$sel17=$select;
 		$_SESSION['count']=$_SESSION['count']-7;
-		$message=" ШПИОНИН В МРЕЖАТА! Обвинен сте в нелегално източване на данни от сървъра на ВСО. Попдате във Врачанския затвор и губите 5 хода!!! :(" ;
+		$message=" ШПИОНИН В МРЕЖАТА! Обвинен сте в нелегално източване на данни от сървъра на ВСО. Попдате във Врачанския затвор и губите 5 хода!!! 😞" ;
 		break;
 	case '18':
 		$sel18=$select;
@@ -173,7 +175,7 @@ include('includes/form.php');
 	case '19':
 		$sel19=$select;
 		$_SESSION['money']=$_SESSION['money']-5;
-		$message="Оправи си вересиите. Имаш неплатена сметка в бара. Губиш 5 монети :(";
+		$message="Оправи си вересиите. Имаш неплатена сметка в бара. Губиш 5 монети 😞";
 		break;
 
 	case '20':
@@ -183,17 +185,17 @@ include('includes/form.php');
 	case '20':
 		$sel20=$select;
 		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети 🙂";
 		break;
 	case '21':
 		$sel21=$select;
 		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети 🙂";
 		break;
 	case '22':
 		$sel22=$select;
 		$_SESSION['money']=$_SESSION['money']-5;
-		$message="Оправи си вересиите. Имаш неплатена сметка в бара. Губиш 5 монети :(";
+		$message="Оправи си вересиите. Имаш неплатена сметка в бара. Губиш 5 монети 😞";
 		break;
 	case '23':
 		$sel23=$select;
@@ -202,7 +204,7 @@ include('includes/form.php');
 			if ($_SESSION['money']>100) {
 			$_SESSION['money']=$_SESSION['money']-100;
 			$_SESSION['hotel23']=1;
-			$message="Честито, купи хотел :)"; 
+			$message="Честито, купи хотел 🙂"; 
 			}else{
 				$_SESSION['money']=$_SESSION['money']-10;
 				$message="Нощувка в хотела - 10";
@@ -215,7 +217,7 @@ include('includes/form.php');
 	case '24':
 		$sel24=$select;
 		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети 🙂";
 		break;
 	case '25':
 		$sel25=$select;
@@ -229,7 +231,7 @@ include('includes/form.php');
 	case '27':
 		$sel27=$select;
 		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети 🙂";
 		break;
 	case '28':
 		$sel28=$select;
@@ -238,7 +240,7 @@ include('includes/form.php');
 			if ($_SESSION['money']>100) {
 			$_SESSION['money']=$_SESSION['money']-100;
 			$_SESSION['hotel28']=1;
-			$message="Честито, купи хотел :)"; 
+			$message="Честито, купи хотел 🙂"; 
 			}else{
 				$_SESSION['money']=$_SESSION['money']-10;
 				$message="Нощувка в хотела - 10";
@@ -251,11 +253,11 @@ include('includes/form.php');
 	case '29':
 		$sel29=$select;
 		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети 🙂";
 		break;
 	case '30':
 		$sel30=$select;
-		$_SESSION['result']="Брао, бе! WINNER!!! :)";
+		$_SESSION['result']="Брао, бе! WINNER!!! 🙂";
 		header('Location: game_over.php');
 		break;
 
@@ -328,7 +330,7 @@ if ($_SESSION['hotel2']==1 and $_SESSION['hotel7']==1 and $_SESSION['hotel10']==
 <form method="" action="">
 
 
-	<input type="submit" name="submit" value="submit" onclick="alert('<?php echo $message;  ?> ')">
+	<input class="submit" type="submit" name="submit" value="submit" onclick="alert('<?php echo $message;  ?> ')">
 
 </form>
 <a href="logout.php">LOG OUT</a>
