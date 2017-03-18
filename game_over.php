@@ -27,7 +27,7 @@ echo $row['game_score'];
 echo" " . $_SESSION['user_result'] . "---";
 
 
-$update_query = "UPDATE `games` SET`game_score`= $user_result WHERE `user_id` = 2 ";
+$update_query = "UPDATE `games` SET`game_score`= $user_result WHERE `user_id` = $_SESSION['user_name'] ";
 
 
 $result = mysqli_query($conn, $update_query);
