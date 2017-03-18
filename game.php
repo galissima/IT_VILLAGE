@@ -53,7 +53,7 @@ if ($_SESSION['temp']>30) {
 	$_SESSION['temp']=$_SESSION['temp']-30;
 }
 echo "<br>" . $_SESSION['temp'] . "<br>";
-$_SESSION['temp']=9;
+//$_SESSION['temp']=9;
 switch ($_SESSION['temp']) {
 	case '1':
 		$sel1=$select;

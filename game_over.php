@@ -10,24 +10,36 @@ include('db_connection.php');
 <p id="game">GAME</p>
 <p id="over">OVER</p>
  <p id="score">SCORE: <?php echo $_SESSION['money'] ?> </p> 
-<p id="score_text">SCORE: <?php echo $_SESSION['result'] ?> </p> -->
+<p id="score_text"> <?php echo $_SESSION['result'] ?> </p> 
 </div>
-<a href="games_score.php" class="newgame" id="hover1">NewGame</a>
+<a href="games_score.php" class="newgame" id="hover1">Klasaciq</a>
 <a href="index.php" class="logout" id="hover2">LogOut</a>
 
 <?php
-include('includes/footer.php');
+$user_name=$_SESSION['user_name'];
+echo $user_name;
 
-$read_query ="SELECT `game_score` FROM `games` WHERE `user_id`= 2";
+
+
+// $read_q ="SELECT `user_id` FROM `users` WHERE `user_name`= '$user_name' ";
+// $result = mysqli_query($conn, $read_q);
+// $row = mysqli_fetch_assoc($result);
+// $user_id = $row['user_id'];
+// echo "<br> user ID-" .$user_id . "<br>" ;
+
+
+
+
+$read_query ="SELECT `user_sum_score` FROM `users` WHERE `user_name`= '$user_name'";
 $result = mysqli_query($conn, $read_query);
 $row = mysqli_fetch_assoc($result);
-echo $row['game_score'];
+echo "BD-" .$row['user_sum_score'];
 
-	 $user_result= $_SESSION['money'] + $row['game_score'];
-echo" " . $_SESSION['user_result'] . "---";
+	 $user_result= $_SESSION['money'] + $row['user_sum_score'];
+echo"<br> ----" . $user_result . "---";
 
 
-$update_query = "UPDATE `games` SET`game_score`= $user_result WHERE `user_id` = $_SESSION['user_name'] ";
+$update_query = "UPDATE `users` SET`user_sum_score`= $user_result WHERE `user_name`= '$user_name' ";
 
 
 $result = mysqli_query($conn, $update_query);
@@ -41,7 +53,7 @@ $result = mysqli_query($conn, $update_query);
 
 
 
-
+include('includes/footer.php');
 ?>
 
 
