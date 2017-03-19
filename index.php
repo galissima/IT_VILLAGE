@@ -3,7 +3,7 @@ $title = 'Index';
 include('includes/header.php');
 include('db_connection.php');
 
-echo '<div class="register_index"><a href="register.php">REGISTER</a></div>';
+echo '<a href="register.php">REGISTER</a>';
 session_start();
 // check
 if (!empty($_POST['submit'])) {
@@ -48,7 +48,7 @@ if (!empty($_POST['submit'])) {
 <form action="" method="post">
 	<p><input type="text" name="user_name" class="name" placeholder="Username">*</p>
 	<p><input type="password" name="user_password" class="password" placeholder="Password">*</p>
-	<p><input type="submit" name="submit" value="LOG IN" class="login_index"></p>		
+	<p><input type="submit" name="submit" value="login"></p>		
 	</form>
 </div>
 
