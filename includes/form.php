@@ -2,7 +2,7 @@
 
 $_SESSION['answer_check']=2;
 $message="Дали направи правилният избор ?";
-$quest_rand = rand(1,2);
+$quest_rand = rand(1,6);
 $quest_temp = rand(1,3);
 switch ($quest_temp) {
 	case '1':
