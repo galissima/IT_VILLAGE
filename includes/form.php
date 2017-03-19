@@ -2,7 +2,7 @@
 
 $_SESSION['answer_check']=2;
 $message="Дали направи правилният избор ?";
-$quest_rand = rand(1,2);
+$quest_rand = rand(1,6);
 $quest_temp = rand(1,3);
 switch ($quest_temp) {
 	case '1':
@@ -32,8 +32,3 @@ $correct_answer = $qusts[$quest_rand][3];
   <input type="radio" name="answer" value="<?php echo $qusts[$quest_rand][$quest_temp3]; ?>"> <?php echo  $qusts[$quest_rand][$quest_temp3]; ?><br><br>
   <input type="submit" name="submit" value="answer" onclick="alert('<?php echo $message;  ?> ')">
 </div>
-<?php
-
-	
-		
-?>

@@ -11,37 +11,32 @@ if (!empty($_POST['answer'])) {
 		
 		$_SESSION['count']=$_SESSION['count']+20;
 		$_SESSION['money']=$_SESSION['money']+400;
-		?><div class="correct">Верен Отговор!!!<br> Получаваш 20 хвърляния и 400 монети ;)</div><?php
+		?><div class="answer"><b>Верен Отговор!!!<br> Получаваш 20 хвърляния и 400 монети ;)</b></div><?php
 	}else{
 		$_POST['answer'];
-		$_SESSION['money']=$_SESSION['money']-50;
-		echo "Incorrect answer - 50  coins"; 
-		?><div class="incorrect">Грешен отговор!!!<br> Губиш 50 монети ;(</div><?php
+		$_SESSION['money']=$_SESSION['money']-50; 
+		?><div class="answer"><b>Грешен отговор!!!<br> Губиш 50 монети ;(</b></div><?php
 	}
 	unset($_POST);
 	 $_SESSION['answer_check']=3;
 } 
 elseif ($_SESSION['answer_check']==2) {
-echo "Кофри User - забрави да отгожориш а?";
+?><div class="answer"><b>Няма посочен отговор ;(</b></div><?php
 	 $_SESSION['answer_check']=3;
-	echo $_SESSION['answer_check'];
 }
 
 
 $select= "border: 4px solid red;"; 
 $_SESSION['count']=$_SESSION['count']-1;
-
-// echo "Брой хвърляния:" . $_SESSION['count'] . "<br>" ;
-// echo "Текуща сума: " . $_SESSION['money'] ." Монети ";
 ?>
 <div class="count"> Брой хвърляния: <?php echo $_SESSION['count'] . "<br>" ;?> </div>
-<div class="current_sum"> Tекуща сума: <?php echo  $_SESSION['money'] .  " Монети ";?> </div>
+<div class="current_sum"> Tекуща сума: <?php echo $_SESSION['money'] .  " монети ";?> </div>
 
 <?php
 $rand=rand(1,6);
 
 $_SESSION['temp'] = $_SESSION['temp'] + $rand;
-echo "<div class='position'>Позиция: " . $_SESSION['temp']. "</div>";
+// echo '<div class="position">Позиция: ' . $_SESSION['temp']. "</div>";
    
 
 
@@ -49,10 +44,10 @@ echo "<div class='position'>Позиция: " . $_SESSION['temp']. "</div>";
 if ($_SESSION['temp']>30) {
 	$_SESSION['temp']=$_SESSION['temp']-30;
 	$_SESSION['money']=$_SESSION['money']+100;
-	echo "+100 Монети за завършена обиколка!";
+	?><b><div = class="round"> Печелиш 100 монети за завършена обиколка!</div></b><?php
 }
-echo "<br>" . $_SESSION['temp'] . "<br>";
-//$_SESSION['temp']=9;
+  //echo "<br>" . $_SESSION['temp'] . "<br>";
+// $_SESSION['temp']=9;
 switch ($_SESSION['temp']) {
 	case '1':
 		$sel1=$select;
@@ -110,7 +105,7 @@ switch ($_SESSION['temp']) {
 			}
 
 		}else{
-			$message="Минаваш тънко - хотела е твой";
+			$message="Минаваш тънко - хотелът е твой";
 		}
 		break;
 	case '8':
@@ -341,10 +336,10 @@ if ($_SESSION['hotel2']==1 and $_SESSION['hotel7']==1 and $_SESSION['hotel10']==
 <form method="" action="">
 
 
-	<input type="submit" name="submit" value="ЗарЪТ: <?php echo $rand ;?>" class="dice"onclick="alert('<?php echo $message;  ?> ')">
+	<input type="submit" name="submit" id="hover3" value="<?php echo $rand ;?>" class="dice" onclick="alert('<?php echo $message;  ?> ')">
 
 </form>
-<a href="logout.php">LOG OUT</a>
+<div class="logoutgame"  > <a href="logout.php" id="hover4">Log out</a> </div>
 <div class="container">
 <div class="size div1">B-1</div>
 <div class="size div2">H-2</div>
