@@ -1,7 +1,7 @@
 <?php
 session_start();
-echo "<p id='table1'> Your Game Score </p>";
-echo "<p id='table2'> All Users  Rating </p>";
+echo "<p id='table1'> All Users  Rating </p>";
+echo "<p id='table2'> Your Game Score </p>";
 
 // READ 
 $i=1;
