@@ -11,7 +11,7 @@ include('db_connection.php');
  <p id="score">SCORE: <?php echo $_SESSION['money'] ?> </p> 
 <p id="score_text"> <?php echo $_SESSION['result'] ?> </p> 
 </div>
-<a href="games_score.php" class="newgame" id="hover1">Klasaciq</a>
+<a href="games_score.php" class="newgame" id="hover1">Rating</a>
 <a href="index.php" class="logout" id="hover2">LogOut</a>
 
 <?php
