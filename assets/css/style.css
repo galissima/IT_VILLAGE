@@ -95,7 +95,6 @@ body{
 	z-index: 2;
 	font-family: Georgia;
 	font-size: 20px;
-	font-weight: bold;
 	color: #696;
 }
 	.answer, .round{
@@ -271,7 +270,20 @@ body{
 		background-color: #696;
 		border: 3px solid black;
 		}
-
+	.textarea{
+		width: 25%;
+		height:  100px ;
+		position: absolute;
+		top: 600px;
+		left: 540px;
+		margin-bottom: 20px;
+	}
+	.subtext{
+		position: absolute;
+		top: 710px;
+		left: 540px;
+		margin-bottom: 20px;
+	}
 	/* game_over file*/
 
 	.newgame{

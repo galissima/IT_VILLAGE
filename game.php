@@ -372,6 +372,8 @@ if ($_SESSION['hotel2']==1 and $_SESSION['hotel7']==1 and $_SESSION['hotel10']==
 <div class="size div29">C-29</div>
 <div class="size div30">W-30</div>
 </div>
+
 <?php
+
 include('includes/footer.php');
 ?>
