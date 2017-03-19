@@ -95,6 +95,7 @@ body{
 	z-index: 2;
 	font-family: Georgia;
 	font-size: 20px;
+	font-weight: bold;
 	color: #696;
 }
 	.answer, .round{
