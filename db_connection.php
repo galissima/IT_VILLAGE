@@ -8,6 +8,6 @@ if (!$conn) {
 	die("conection failed" . mysqli_connect_error());
 }
 else{
-	echo "Успешна връзка ";
+	// echo "Успешна връзка ";
 }
 ?>

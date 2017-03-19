@@ -1,6 +1,6 @@
 <?php
 $title = 'Register'; 
-include('assets/includes/header.php');
+include('includes/header.php');
 ?>
 
 <div class="register">
@@ -38,5 +38,5 @@ if (!empty($_POST)) {
 
 
 <?php
-include('assets/includes/footer.php');
+include('includes/footer.php');
 ?>
