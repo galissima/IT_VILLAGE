@@ -35,9 +35,23 @@ body{
 		background-color: red;
 
 	}
-	.name, .password, .email{
+	 .email{
 		width: 60%;
 		height: 40px;
+	
+	}
+	.register_index{
+		position: absolute;
+		top: 342px;
+		left: 790px;
+	}
+	.login_index{
+		background-color: #696;
+		width: 20%;
+		height: 61px;
+		position: relative;
+		border: 3px solid black;
+		left: 0px;
 
 	}
 
