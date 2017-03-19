@@ -18,6 +18,18 @@ body{
 		height: 40px;
 
 	} 
+	.submit_index{
+	position: absolute;
+	background: #696;
+	width: 15%;
+	height: 60px;
+	border: 3px solid black;
+	}
+	#register_index{
+	position: absolute;
+	top:340px;
+	left: 790px;
+	}
 
 	/* Register.php file*/
 
@@ -96,6 +108,7 @@ body{
 	font-family: Georgia;
 	font-size: 20px;
 	color: #696;
+	font-weight: bold;
 }
 	.answer, .round{
 	color: #000;
@@ -108,7 +121,9 @@ body{
 	z-index: 2;
 	font-family: Georgia;
 	font-weight: 20px;
-
+	}
+	.round{
+		margin-top: 400px;
 	}
 	.container{
 	position: relative;
@@ -270,20 +285,7 @@ body{
 		background-color: #696;
 		border: 3px solid black;
 		}
-	.textarea{
-		width: 25%;
-		height:  100px ;
-		position: absolute;
-		top: 600px;
-		left: 540px;
-		margin-bottom: 20px;
-	}
-	.subtext{
-		position: absolute;
-		top: 710px;
-		left: 540px;
-		margin-bottom: 20px;
-	}
+
 	/* game_over file*/
 
 	.newgame{
@@ -320,6 +322,7 @@ body{
    	position: absolute;
    	top: 525px;
   	right: 250px;
+  	border: 3px solid black;
 
 }
 div.gameover{
@@ -370,6 +373,39 @@ div.gameover{
     font-size: 50px;
 
 }
+/*game_score file*/
+.table1{
+	position: absolute;
+	top: 70px;
+	left: 1000px;
+
+}
+
+.table2{
+	position: absolute;
+	top: 70px;
+	left: 150px;
+
+}
+
+#table1{
+	position: absolute;
+	left: 1000px;
+	font-weight: bold;
+	font-family: Georgia;
+	font-size: 20px;
+
+}
+
+#table2{
+	position: absolute;
+	left: 150px;
+	font-weight: bold;
+	font-family: Georgia;
+	font-size: 20px;
+
+}
+
 	.footer{
 		color: #000;
 		position: absolute;
