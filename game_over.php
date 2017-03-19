@@ -64,12 +64,5 @@ $result = mysqli_query($conn, $insert_query);
 	} else {
 	echo "Error: " . $insert_query . " - " . mysqli_error($conn);
 	}
-
-
-
-
 include('includes/footer.php');
 ?>
-
-
-
