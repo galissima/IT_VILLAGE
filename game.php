@@ -3,7 +3,7 @@ $title = 'Game';
 include('includes/header.php');
 include('includes/quest.php');
 session_start();
-
+ 
 
 if (!empty($_POST['answer'])) {
 
@@ -51,8 +51,8 @@ if ($_SESSION['temp']>30) {
 switch ($_SESSION['temp']) {
 	case '1':
 		$sel1=$select;
-		$_SESSION['money']=$_SESSION['money']-5;
-		$message="Добре дошъл местния бар! Предлагаме само жива бира. Губиш 5 монети :(";
+		$_SESSION['money']=$_SESSION['money']+5;
+		$message="Добре дошъл местния бар! Милена черпи!!! Печелиш Главоболие! и 5 монети :)";
 		break;
 	case '2':
 		$sel2=$select;
@@ -110,8 +110,8 @@ switch ($_SESSION['temp']) {
 		break;
 	case '8':
 		$sel8=$select;
-		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$_SESSION['money']=$_SESSION['money']+100;
+		$message=" Стар приятел ти върна 100 монети!";
 		break;
 	case '9':
 		$sel9=$select;
@@ -162,8 +162,8 @@ include('includes/form.php');
 		break;
 	case '16':
 		$sel16=$select;
-		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$_SESSION['money']=$_SESSION['money']+50;
+		$message="Отговоориха на обявата ти в OLX за продажбата на компа + 50 монети";
 		
 		break;
 	case '17':
@@ -195,12 +195,12 @@ include('includes/form.php');
 	case '21':
 		$sel21=$select;
 		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$message="Спъна се в портфейла на Емо но в него имаше само 20 монети. Честито!";
 		break;
 	case '22':
 		$sel22=$select;
 		$_SESSION['money']=$_SESSION['money']-5;
-		$message="Оправи си вересиите. Имаш неплатена сметка в бара. Губиш 5 монети :(";
+		$message="ВСЕ ОЩЕ ИМАШ ВЕРСИИ В БАРА!  Губиш 5 монети :(";
 		break;
 	case '23':
 		$sel23=$select;
@@ -236,7 +236,7 @@ include('includes/form.php');
 	case '27':
 		$sel27=$select;
 		$_SESSION['money']=$_SESSION['money']+20;
-		$message=" зЕми тия 20 монети :)";
+		$message=" зЕми тия 20 монети - еи така !";
 		break;
 	case '28':
 		$sel28=$select;
