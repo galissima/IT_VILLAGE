@@ -4,7 +4,7 @@ $title = 'GameOver';
 include('includes/header.php');
 include('db_connection.php');
 ?>
-
+ 
 <div class="gameover">	
 <p id="game">GAME</p>
 <p id="over">OVER</p>

@@ -3,7 +3,7 @@ $title = 'Game';
 include('includes/header.php');
 include('includes/quest.php');
 session_start();
-
+ 
 
 if (!empty($_POST['answer'])) {
 

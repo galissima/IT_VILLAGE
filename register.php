@@ -2,7 +2,7 @@
 $title = 'Register'; 
 include('includes/header.php');
 ?>
-
+ 
 <div class="register">
 <h3>Register now:<h3>
 <form method="post" action="">

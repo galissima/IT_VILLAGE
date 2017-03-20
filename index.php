@@ -2,7 +2,7 @@
 $title = 'Index';
 include('includes/header.php');
 include('db_connection.php');
-
+ 
 echo '<div id="register_index"> <a href="register.php" >REGISTER</a> </div>';
 session_start();
 // check
